@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import miLogo from "./miLogo.png";
+import { NavLink as Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,10 +16,18 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="">Weddings</MenuLink>
-        <MenuLink href="">Events</MenuLink>
-        <MenuLink href="">About</MenuLink>
-        <MenuLink href="">Contact</MenuLink>
+        <NavLink to="" activeStyle>
+          Weddings
+        </NavLink>
+        <NavLink to="" activeStyle>
+          Events
+        </NavLink>
+        <NavLink to="/about" activeStyle>
+          About
+        </NavLink>
+        <NavLink to="/contact" activeStyle>
+          Contact
+        </NavLink>
       </Menu>
     </Nav>
   );
@@ -26,7 +35,7 @@ const Navbar = () => {
 
 export default Navbar;
 
-const MenuLink = styled.a`
+const NavLink = styled(Link)`
   padding: 1rem 2rem;
   cursor: grab;
   text-align: center;
