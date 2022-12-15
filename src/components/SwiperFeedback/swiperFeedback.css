@@ -1,0 +1,58 @@
+#swiperFeedback { height: 50% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: xx-large;
+    text-align: center;
+    color: #c9952c;
+    margin-top: 60px;
+}
+
+.swiper {
+  background: white;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  height: auto;
+}
+
+
+.imageSlider {
+  display: block;
+ width: 200px;
+  height: 270px;
+  border-radius: 10px 
+
+}
+
+
+
+.swiper-pagination .swiper-pagination-bullet {
+  opacity: 0,3;
+  background-color: #abdbd9;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #abdbd9;
+}

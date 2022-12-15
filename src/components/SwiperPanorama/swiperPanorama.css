@@ -1,0 +1,106 @@
+#SwiperPanorama { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiperContainer {
+  width: 100%;
+  height: 750px;
+}
+
+.swiperSlide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.imagePanorama {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imgTitle {
+      font-family: 'Dancing Script';
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-shadow: 2px 1px 4px black;
+    position:absolute;
+    top:15%;
+    left:10%;
+    color: white;
+    pointer-events:none;
+    z-index:4;
+    transition: .6s ease-in-out;
+}
+
+.services {
+
+    font-family: 'Helvetica';
+    font-size: 1.5rem;
+
+    text-shadow: 2px 1px 4px black;
+    position:absolute;
+    top:21%;
+    left:10%;
+    color: white;
+    pointer-events:none;
+    z-index:4;
+    transition: .6s ease-in-out; 
+    text-align: left;
+}
+
+.imgTitle1 {
+    font-family: 'Dancing Script';
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 1px 4px black;
+  position:absolute;
+  top:12%;
+  right:10%;
+  color: white;
+  pointer-events:none;
+  z-index:4;
+  transition: 0.6s ease-in-out;
+  text-align: right;
+}
+
+.services1 {
+
+    font-family: 'Helvetica';
+    font-size: 1.5rem;
+    text-shadow: 2px 1px 4px black;
+    position:absolute;
+    top:21%;
+    right:10%;
+    color: white;
+    pointer-events:none;
+    z-index:4;
+    transition: .6s ease-in-out; 
+    text-align: right;
+}
