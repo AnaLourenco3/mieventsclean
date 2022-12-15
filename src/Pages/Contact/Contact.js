@@ -1,7 +1,13 @@
-import React from "react";
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: auto;
+  height: 800px;
+  margin: 180px 0 0 0;
+`;
 
 function Contact() {
-  return <div>Contact</div>;
+  return <Container>Contact</Container>;
 }
 
 export default Contact;

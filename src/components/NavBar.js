@@ -16,18 +16,10 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <NavLink to="" activeStyle>
-          Weddings
-        </NavLink>
-        <NavLink to="" activeStyle>
-          Events
-        </NavLink>
-        <NavLink to="/about" activeStyle>
-          About
-        </NavLink>
-        <NavLink to="/contact" activeStyle>
-          Contact
-        </NavLink>
+        <NavLink to="">Weddings</NavLink>
+        <NavLink to="">Events</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </Menu>
     </Nav>
   );

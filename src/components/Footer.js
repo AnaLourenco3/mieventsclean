@@ -8,8 +8,10 @@ import { ImLocation } from "react-icons/im";
 const Box = styled.div`
   padding: 80px 60px;
   background: #abdbd9;
-  position: relative;
+  position: sticky;
+  right: 0;
   bottom: 0;
+  left: 0;
   width: auto;
 
   @media (max-width: 768px) {
