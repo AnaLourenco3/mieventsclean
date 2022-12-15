@@ -2,11 +2,11 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import styled from "styled-components";
-import "./index.css";
 import SwiperFeedback from "./components/SwiperFeedback/SwiperFeedback";
 import ContactUs from "./components/ContactUs";
 import ImageGrid from "./components/ImageGrid/ImageGrid";
 import SwiperPanorama from "./components/SwiperPanorama/SwiperPanorama";
+import "./index.css";
 
 const App = () => {
   const ContainerCarouselSlider = styled.div`
