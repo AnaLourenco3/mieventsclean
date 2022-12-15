@@ -114,11 +114,11 @@ const Footer = () => {
             <Heading>Made By Mi</Heading>
             <FootingParagraph>
               <MdEmail style={{ marginRight: "7px" }} />
-              ana_lucia3@hotmail.com
+              madebymieventos@gmail.com
             </FootingParagraph>
             <FootingParagraph>
-              <BsFillTelephoneFill style={{ marginRight: "7px" }} />{" "}
-              0031639112882
+              <BsFillTelephoneFill style={{ marginRight: "7px" }} /> +351
+              964345526
             </FootingParagraph>
             <FootingParagraph>
               <ImLocation style={{ marginRight: "7px" }} /> Charneca da Caparica

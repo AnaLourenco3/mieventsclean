@@ -54,9 +54,9 @@ function Header() {
     <Container>
       <Details>
         <MdEmail style={{ paddingRight: "5px" }} />
-        <p style={{ paddingRight: "10px" }}> ana_lucia3@hotmail.com </p>{" "}
+        <p style={{ paddingRight: "10px" }}> madebymieventos@gmail.com </p>{" "}
         <BsFillTelephoneFill style={{ paddingRight: "5px" }} />
-        <p>0031639112882</p>
+        <p>+351 964345526</p>
       </Details>
       <SocialMedia>
         <BsFacebook style={{ paddingRight: "10px" }} />
