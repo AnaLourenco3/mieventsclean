@@ -104,3 +104,35 @@ body {
     transition: .6s ease-in-out; 
     text-align: right;
 }
+
+@media screen and (max-width:768px){
+
+  .imgTitle {
+
+  font-size: 2rem;
+  top:5%;
+}
+ 
+.services {
+
+
+    font-size: 1.2rem;
+line-height: 7px;
+top:10%;
+}
+
+.imgTitle1 {
+
+  font-size: 2rem;
+ 
+}
+
+.services1 {
+
+ 
+    font-size: 1.2rem;
+    line-height: 7px;
+   
+}
+
+}
