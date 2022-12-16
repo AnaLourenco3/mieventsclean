@@ -11,7 +11,7 @@ export default function SwiperPanorama() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 4000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
@@ -31,6 +31,17 @@ export default function SwiperPanorama() {
               <p>Vow renewals</p>
             </div>
           </div>
+          <div>
+            <div className="imgTitle1">Events</div>
+            <div className="services1">
+              <p>Baptisms</p>
+              <p>Baby Showers</p>
+              <p>Gender revelation</p>
+              <p>Birthday parties for children</p>
+              <p>Birthday parties for adults</p>
+              <p>Other events</p>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide className="swiperSlide2">
           <img
@@ -38,6 +49,15 @@ export default function SwiperPanorama() {
             src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             alt="img wedding"
           />
+          <div>
+            <div className="imgTitle">Weddings</div>
+            <div className="services">
+              <p>Wedding proposals</p>
+              <p>Bachelorette parties</p>
+              <p>Weddings</p>
+              <p>Vow renewals</p>
+            </div>
+          </div>
           <div>
             <div className="imgTitle1">Events</div>
             <div className="services1">
