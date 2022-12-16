@@ -17,7 +17,7 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 8;
   @media (max-width: 768px) {
     display: flex;
     font-size: xx-small;

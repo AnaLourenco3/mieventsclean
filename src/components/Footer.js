@@ -133,10 +133,16 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Social Media</Heading>
-            <FooterLink href="#" style={{ marginLeft: "10px" }}>
+            <FooterLink
+              href="#"
+              style={{ marginLeft: "10px", fontSize: "1.2rem" }}
+            >
               <BsFacebook />
             </FooterLink>
-            <FooterLink href="#" style={{ marginLeft: "10px" }}>
+            <FooterLink
+              href="#"
+              style={{ marginLeft: "10px", fontSize: "1.2rem" }}
+            >
               <BsInstagram />
             </FooterLink>
           </Column>

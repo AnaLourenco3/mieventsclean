@@ -18,8 +18,9 @@ const Navbar = () => {
       <Menu isOpen={isOpen}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/weddings">Weddings</NavLink>
-        <NavLink to="/events">Events</NavLink>
+        <NavLink to="/events">Parties&Events</NavLink>
         <NavLink to="/diy">Diy</NavLink>
+        <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </Menu>

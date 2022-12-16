@@ -14,9 +14,9 @@ export default ContactUs;
 
 const Container = styled.div`
   width: 100%;
-  margin: 20px auto 40px auto;
+  margin: 50px auto 40px auto;
   background-color: rgb(226, 183, 185, 0.8);
-  height: auto;
+  height: 130px;
   padding: 30px 0px;
   text-align: center;
 `;

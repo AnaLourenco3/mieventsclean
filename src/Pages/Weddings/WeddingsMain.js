@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function Weddings() {
+function WeddingsMain() {
   return (
     <div>
       <ContainerImage>
@@ -15,7 +15,7 @@ function Weddings() {
   );
 }
 
-export default Weddings;
+export default WeddingsMain;
 
 const ContainerImage = styled.div`
   width: auto;
