@@ -32,7 +32,7 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: Opx auto 0px auto;
+  margin: O auto 0 auto;
 `;
 
 const Row = styled.div`
@@ -61,7 +61,7 @@ const FooterLink = styled.a`
 
   @media (max-width: 768px) {
     display: flex;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     line-height: 3px;
   }
 `;
@@ -75,7 +75,7 @@ const FootingParagraph = styled.div`
   line-height: 10px;
   @media (max-width: 768px) {
     display: flex;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     line-height: 3px;
   }
 `;
@@ -113,15 +113,15 @@ const Footer = () => {
           <Column>
             <Heading>Made By Mi</Heading>
             <FootingParagraph>
-              <MdEmail style={{ marginRight: "7px" }} />
+              <MdEmail style={{ marginRight: "5px" }} />
               madebymieventos@gmail.com
             </FootingParagraph>
             <FootingParagraph>
-              <BsFillTelephoneFill style={{ marginRight: "7px" }} /> +351
+              <BsFillTelephoneFill style={{ marginRight: "5px" }} /> +351
               964345526
             </FootingParagraph>
             <FootingParagraph>
-              <ImLocation style={{ marginRight: "7px" }} /> Charneca da Caparica
+              <ImLocation style={{ marginRight: "5px" }} /> Charneca da Caparica
             </FootingParagraph>
           </Column>
           <Column>

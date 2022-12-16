@@ -11,7 +11,7 @@ export default function SwiperPanorama() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 6000,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}

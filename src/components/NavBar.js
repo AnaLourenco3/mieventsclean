@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Logo href="">
+      <Logo to="/">
         <img src={miLogo} height="70px" alt="logo" />
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -16,8 +16,10 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <NavLink to="">Weddings</NavLink>
-        <NavLink to="">Events</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/weddings">Weddings</NavLink>
+        <NavLink to="/events">Events</NavLink>
+        <NavLink to="/diy">Diy</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </Menu>
@@ -55,7 +57,7 @@ const Nav = styled.div`
   top: 45px;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 7;
 `;
 
 const Logo = styled.a`

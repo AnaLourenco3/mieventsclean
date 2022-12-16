@@ -21,6 +21,8 @@ const Container = styled.div`
   @media (max-width: 768px) {
     display: flex;
     font-size: xx-small;
+    flex-wrap: nowrap;
+    padding: 0 1rem;
   }
 `;
 
