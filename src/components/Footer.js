@@ -4,6 +4,7 @@ import { BsInstagram } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";
+import { BsPinterest } from "react-icons/bs";
 
 const Box = styled.div`
   padding: 80px 60px;
@@ -144,6 +145,12 @@ const Footer = () => {
               style={{ marginLeft: "10px", fontSize: "1.2rem" }}
             >
               <BsInstagram />
+            </FooterLink>
+            <FooterLink
+              href="#"
+              style={{ marginLeft: "10px", fontSize: "1.2rem" }}
+            >
+              <BsPinterest />
             </FooterLink>
           </Column>
         </Row>

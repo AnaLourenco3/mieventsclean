@@ -37,8 +37,8 @@ function Weddings() {
             nisi. Nam eget dui.{" "}
           </p>
         </ContainerText>
-        {dataWeddings.map((data) => (
-          <ContainerBlog>
+        {dataWeddings.map((data, index) => (
+          <ContainerBlog key={index}>
             <ContainerImageBlog>
               <img
                 style={{ width: "450px", height: "350px" }}

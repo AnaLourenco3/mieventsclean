@@ -32,15 +32,11 @@ export default function SwiperFeedback() {
         modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
-        <ul>
-          {dataFeedback.map((item) => (
-            <SwiperSlide>
-              <li key={item.index}>
-                <img className="imageSlider" src={item.image} alt={item.name} />
-              </li>
-            </SwiperSlide>
-          ))}
-        </ul>
+        {dataFeedback.map((item, index) => (
+          <SwiperSlide key={index}>
+            <img className="imageSlider" src={item.image} alt={item.name} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
