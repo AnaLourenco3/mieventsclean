@@ -31,7 +31,7 @@ const Details = styled.div`
   justify-content: space-around;
   align-items: center;
   font-size: 14px;
-  color: white;
+  color: black;
   @media (max-width: 768px) {
     display: flex;
     font-size: xx-small;
@@ -42,7 +42,7 @@ const SocialMedia = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: black;
   font-size: 14px;
   @media (max-width: 768px) {
     display: flex;

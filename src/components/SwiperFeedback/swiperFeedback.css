@@ -5,21 +5,29 @@ body {
   height: 100%;
 }
 
-body {
+/* body {
 
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
-}
+} */
 
 .heading {
-  font-family: 'Dancing Script', cursive;
-  font-size: xx-large;
+  font-family: "Poppins";
+  font-size: x-large;
     text-align: center;
     color: #c9952c;
     margin-top: 60px;
+}
+
+ @media screen and (max-width:700px){
+      .heading{
+        
+      font-size: x-large;
+   
+      }
 }
 
 .swiper {

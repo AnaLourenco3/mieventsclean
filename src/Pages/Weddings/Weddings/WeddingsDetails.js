@@ -21,23 +21,22 @@ const ContainerBody = styled.div`
   width: 60%;
   min-height: 800px;
   max-height: none;
-  margin: 300px auto 110px auto;
+  margin: 250px auto 110px auto;
   line-height: 30px;
   text-align: center;
-  font-family: "courier";
+  font-family: "Poppins";
 
   @media (max-width: 768px) {
     width: 90%;
     min-height: 500px;
     max-height: none;
     margin: 200px auto 110px auto;
-    line-height: 20px;
+    line-height: 15px;
     text-align: center;
-    font-family: "courier";
   } ;
 `;
 const ContainerBlogDetails = styled.p`
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 70px;
   @media (max-width: 768px) {
     font-size: 0.8rem;

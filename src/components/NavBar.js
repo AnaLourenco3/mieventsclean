@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import miLogo from "./miLogo.png";
 import { NavLink as Link } from "react-router-dom";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
-      <Logo to="/">
+      <Logo href="/">
         <img src={miLogo} height="70px" alt="logo" />
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -17,8 +18,30 @@ const Navbar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/weddings">Weddings</NavLink>
-        <NavLink to="/events">Parties&Events</NavLink>
+        <NavbarDropdown>
+          <NavLink style={{ textDecoration: "none" }}>
+            Weddings <RiArrowDropDownLine />
+          </NavLink>
+          <NavbarDropdownContent>
+            <NavLink to="/weddings">Marriage Proposals</NavLink>{" "}
+            <NavLink to="/weddings">Bachelorette Parties</NavLink>
+            <NavLink to="/weddings">Weddings</NavLink>
+            <NavLink to="/weddings">Vow renewals</NavLink>
+          </NavbarDropdownContent>
+        </NavbarDropdown>
+        <NavbarDropdown>
+          <NavLink style={{ textDecoration: "none" }}>
+            Parties&Events <RiArrowDropDownLine />
+          </NavLink>
+          <NavbarDropdownContent>
+            <NavLink to="/weddings">Children birthday Parties</NavLink>{" "}
+            <NavLink to="/weddings">Adult birthday Parties</NavLink>
+            <NavLink to="/weddings">Baptisms</NavLink>
+            <NavLink to="/weddings">Baby showers</NavLink>
+            <NavLink to="/weddings">Gender revelation parties</NavLink>
+            <NavLink to="/wedding">Other events</NavLink>
+          </NavbarDropdownContent>
+        </NavbarDropdown>
         <NavLink to="/diy">Diy</NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
@@ -36,13 +59,11 @@ const NavLink = styled(Link)`
   text-align: center;
   text-decoration: none;
   color: #c9952c;
-  font-family: "Dancing Script";
-  font-size: 1.3rem;
-  transition: all 0.3s ease-in;
+  font-family: "Helvetica";
+  font-size: 1rem;
 
   &:hover {
-    font-size: 1.4rem;
-    transition: 300ms ease-in;
+    text-decoration: underline;
   }
 `;
 
@@ -70,7 +91,7 @@ const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     overflow: hidden;
     background-color: rgb(255, 255, 255, 0.9);
     flex-direction: column;
@@ -91,7 +112,31 @@ const Hamburger = styled.div`
     margin-bottom: 4px;
     border-radius: 5px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1050px) {
     display: flex;
   }
+`;
+
+const NavbarDropdown = styled.div`
+  position: relative;
+
+  &:hover {
+    display: block;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+`;
+
+const NavbarDropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  /* background-color: #f9f9f9; */
+  min-width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
+  z-index: 1;
 `;

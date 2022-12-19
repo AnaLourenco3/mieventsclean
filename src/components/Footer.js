@@ -42,18 +42,17 @@ const Row = styled.div`
   grid-gap: 100px;
 
   @media (max-width: 1000px) {
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
     grid-gap: 15px;
   }
 `;
 
 const FooterLink = styled.a`
-  color: white;
+  color: black;
   margin-bottom: 20px;
-  font-size: 0.8rem;
+  font-size: 14px;
   text-decoration: none;
-  font-family: "Arial";
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
 
   &:hover {
     color: rgb(201, 149, 44, 0.5);
@@ -68,11 +67,10 @@ const FooterLink = styled.a`
 `;
 
 const FootingParagraph = styled.div`
-  color: white;
+  color: black;
   margin-bottom: 20px;
-  font-family: "Arial";
-  font-size: 0.8rem;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   line-height: 10px;
   @media (max-width: 768px) {
     display: flex;
@@ -82,11 +80,11 @@ const FootingParagraph = styled.div`
 `;
 
 const Heading = styled.p`
-  font-size: 22px;
+  font-size: 17px;
   color: #c9952c;
   margin-bottom: 40px;
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+
   @media (max-width: 768px) {
     display: flex;
     font-size: 1rem;
@@ -94,11 +92,11 @@ const Heading = styled.p`
 `;
 
 const Copyright = styled.div`
-  color: white;
+  color: black;
   text-align: center;
   margin-top: 60px;
-  margin-bottom: 15px;
-  font-family: "Arial";
+
+  font-family: "Poppins", sans-serif;
   font-size: small;
   @media (max-width: 768px) {
     font-size: x-small;
@@ -129,27 +127,32 @@ const Footer = () => {
             <Heading>Services</Heading>
             <FooterLink href="#">Weddings</FooterLink>
             <FooterLink href="#">Events</FooterLink>
+            <FooterLink href="#">Diy</FooterLink>
             <FooterLink href="#">About</FooterLink>
             <FooterLink href="#">Contact Us</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>
+
             <FooterLink
-              href="#"
-              style={{ marginLeft: "10px", fontSize: "1.2rem" }}
+              href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y="
+              style={{ marginLeft: "10px" }}
+            >
+              <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Weddings
+            </FooterLink>
+            <FooterLink
+              href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y="
+              style={{ marginLeft: "10px" }}
+            >
+              <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Events
+            </FooterLink>
+            <FooterLink
+              href="https://www.facebook.com/profile.php?id=100088437476729"
+              style={{ marginLeft: "10px" }}
             >
               <BsFacebook />
             </FooterLink>
-            <FooterLink
-              href="#"
-              style={{ marginLeft: "10px", fontSize: "1.2rem" }}
-            >
-              <BsInstagram />
-            </FooterLink>
-            <FooterLink
-              href="#"
-              style={{ marginLeft: "10px", fontSize: "1.2rem" }}
-            >
+            <FooterLink href="#" style={{ marginLeft: "10px" }}>
               <BsPinterest />
             </FooterLink>
           </Column>

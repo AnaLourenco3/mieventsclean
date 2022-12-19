@@ -10,7 +10,6 @@ import Events from "./Pages/Events/Events";
 import HomePage from "./Pages/Homepage/HomePage";
 import Weddings from "./Pages/Weddings/Weddings/Weddings";
 import WeddingsDetails from "./Pages/Weddings/Weddings/WeddingsDetails";
-import WeddingsMain from "./Pages/Weddings/WeddingsMain";
 
 const App = () => {
   return (
@@ -24,9 +23,8 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/weddings" element={<WeddingsMain />} />
-          <Route path="/weddings/weddings" element={<Weddings />} />
-          <Route path="/weddings/weddings/:id" element={<WeddingsDetails />} />
+          <Route path="/weddings" element={<Weddings />} />
+          <Route path="/weddings/:id" element={<WeddingsDetails />} />
           <Route path="/events" element={<Events />} />
         </Routes>
       </div>

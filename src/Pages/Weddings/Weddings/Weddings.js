@@ -68,11 +68,11 @@ const ContainerImage = styled.div`
 `;
 
 const TitleEvent = styled.h1`
-  font-family: "Dancing Script";
-  font-size: 6rem;
+  font-family: Amsterdam;
+  font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 15%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -86,45 +86,70 @@ const TitleEvent = styled.h1`
 `;
 
 const ContainerBody = styled.div`
-  width: 80%;
+  width: 85%;
   min-height: 800px;
   max-height: none;
   margin: 0 auto 100px auto;
+  @media (max-width: 768px) {
+    width: 95%;
+    max-height: none;
+    margin: 70px auto 110px auto;
+  } ;
 `;
 
 const ContainerQuote = styled.div`
-  width: 80%;
   text-align: center;
 
   margin: 50px auto 50px auto;
   font-family: "Dancing Script";
-  font-size: 2.5rem;
+  font-size: 2rem;
   vertical-align: center;
 `;
 
 const ContainerText = styled.div`
-  width: 80%;
-
   margin: 50px auto 110px auto;
-  font-family: "courier";
+  font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   vertical-align: center;
   text-align: center;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    max-height: none;
+    margin: 100px auto 110px auto;
+    line-height: 20px;
+    text-align: center;
+  } ;
 `;
 
 const ContainerBlog = styled.div`
   max-width: 900px;
   height: auto;
   margin: 80px auto auto auto;
-  font-family: "courier";
+  font-family: "Poppins", sans-serif;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
   text-align: left;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    min-height: 500px;
+    max-height: none;
+    margin: 80px auto 110px auto;
+    line-height: 7px;
+    text-align: center;
+    grid-gap: 10px;
+    font-size: 0.8rem;
+  } ;
 `;
 
 const ContainerImageBlog = styled.div`
   margin-left: 50px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  } ;
 `;
 
 const ContainerDescriptionBlog = styled.div`

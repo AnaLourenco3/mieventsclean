@@ -16,23 +16,23 @@ const Container = styled.div`
   width: 100%;
   margin: 50px auto 40px auto;
   background-color: rgb(226, 183, 185, 0.8);
-  height: 130px;
+  height: 200px;
   padding: 30px 0px;
   text-align: center;
 `;
 
 const Text = styled.h1`
-  font-family: "Dancing Script", cursive;
+  font-family: Amsterdam;
   color: white;
 `;
 
 const Button = styled.button`
-  padding: 7px;
-  font-family: "Arial";
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
   color: white;
   background: none;
   cursor: grab;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   border: 2px solid white;
   border-radius: 50px;

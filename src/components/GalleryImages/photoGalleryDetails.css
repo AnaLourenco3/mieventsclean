@@ -20,7 +20,7 @@
   }
   
   .galleryWrap .single img:hover {
-    transform: scale(1.5);
+    transform: scale(1.05);
   }
 
   @media (max-width: 991px) {

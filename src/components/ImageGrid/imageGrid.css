@@ -1,6 +1,6 @@
 .container{
     max-width:900px;
-    margin: 50px auto 80px auto;
+    margin: 0 auto 80px auto;
     
     display:grid;
   grid-template-columns: auto auto auto;
@@ -10,11 +10,22 @@
     text-align:center;
 }
 
+
 .title {
-font-family: 'Dancing Script';
-font-size: xx-large;
+font-family: "Poppins";
+font-size: x-large;
 text-align: center;
 color: #c9952c;
+margin-bottom: 50px;
+}
+
+@media screen and (max-width:700px){
+    .title{
+      
+    font-size: x-large;
+ 
+    }
+
 }
 
 .gallery-item{
@@ -45,8 +56,8 @@ color: #c9952c;
 }
 
 .gallery-item .text{
-    font-family: Helvetica;/*'Dancing Script'*/;
-    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
     text-shadow: 2px 1px 4px black;
     opacity:0;
     position:absolute;
