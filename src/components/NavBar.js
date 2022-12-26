@@ -6,6 +6,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Nav>
       <Logo href="/">
@@ -23,10 +24,10 @@ const Navbar = () => {
             Weddings <RiArrowDropDownLine />
           </NavLink>
           <NavbarDropdownContent>
-            <NavLink to="/weddings">Marriage Proposals</NavLink>{" "}
-            <NavLink to="/weddings">Bachelorette Parties</NavLink>
-            <NavLink to="/weddings">Weddings</NavLink>
-            <NavLink to="/weddings">Vow renewals</NavLink>
+            <NavLink to="/weddings">Marriage Proposal</NavLink>{" "}
+            <NavLink to="/weddings">Bachelorette Party</NavLink>
+            <NavLink to="/weddings">Wedding</NavLink>
+            <NavLink to="/weddings">Vow Renewal</NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavbarDropdown>
@@ -34,12 +35,12 @@ const Navbar = () => {
             Parties&Events <RiArrowDropDownLine />
           </NavLink>
           <NavbarDropdownContent>
-            <NavLink to="/weddings">Children birthday Parties</NavLink>{" "}
-            <NavLink to="/weddings">Adult birthday Parties</NavLink>
-            <NavLink to="/weddings">Baptisms</NavLink>
-            <NavLink to="/weddings">Baby showers</NavLink>
-            <NavLink to="/weddings">Gender revelation parties</NavLink>
-            <NavLink to="/wedding">Other events</NavLink>
+            <NavLink to="/weddings">Child Birthday</NavLink>{" "}
+            <NavLink to="/weddings">Adult Birthday</NavLink>
+            <NavLink to="/weddings">Baptism</NavLink>
+            <NavLink to="/weddings">Baby Shower</NavLink>
+            <NavLink to="/weddings">Gender Revelation</NavLink>
+            <NavLink to="/wedding">Other Events</NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavLink to="/diy">Diy</NavLink>
@@ -95,7 +96,7 @@ const Menu = styled.div`
     overflow: hidden;
     background-color: rgb(255, 255, 255, 0.9);
     flex-direction: column;
-    max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+    max-height: ${({ isOpen }) => (isOpen ? "auto" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
   }
@@ -118,7 +119,12 @@ const Hamburger = styled.div`
 `;
 
 const NavbarDropdown = styled.div`
-  position: relative;
+  cursor: grab;
+  text-align: center;
+  text-decoration: none;
+  color: #c9952c;
+  font-family: "Helvetica";
+  font-size: 1rem;
 
   &:hover {
     display: block;
@@ -128,6 +134,21 @@ const NavbarDropdown = styled.div`
       flex-direction: column;
       margin-top: 10px;
       background-color: rgb(255, 255, 255);
+    }
+  }
+
+  @media (max-width: 1050px) {
+    display: flex;
+
+    &:hover {
+      display: block;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        background-color: rgb(255, 255, 255);
+      }
     }
   }
 `;

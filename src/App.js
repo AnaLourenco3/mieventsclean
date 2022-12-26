@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import "./index.css";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
+import Diy from "./Pages/diy/Diy";
 import Events from "./Pages/Events/Events";
 import HomePage from "./Pages/Homepage/HomePage";
 import Weddings from "./Pages/Weddings/Weddings/Weddings";
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/weddings" element={<Weddings />} />
           <Route path="/weddings/:id" element={<WeddingsDetails />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/diy" element={<Diy />} />
         </Routes>
       </div>
       <div>

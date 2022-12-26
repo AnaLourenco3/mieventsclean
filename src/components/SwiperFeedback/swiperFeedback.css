@@ -1,9 +1,9 @@
 #swiperFeedback { height: 50% }
-html,
+/* html,
 body {
   position: relative;
   height: 100%;
-}
+} */
 
 /* body {
 
@@ -19,7 +19,9 @@ body {
   font-size: x-large;
     text-align: center;
     color: #c9952c;
-    margin-top: 60px;
+    margin-top: 130px;
+    z-index:-2;
+  background-color: none;
 }
 
  @media screen and (max-width:700px){
@@ -31,9 +33,9 @@ body {
 }
 
 .swiper {
-  background: white;
+
   width: 100%;
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 60px;
 
 }
@@ -48,10 +50,15 @@ body {
 
 .imageSlider {
   display: block;
- width: 200px;
-  height: 270px;
-  border-radius: 10px 
+ width: 250px;
+  height: 350px;
+  border-radius: 10px ;
 
+
+}
+
+.imageSlider:hover {
+  transform: scale(1.30);
 }
 
 

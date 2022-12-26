@@ -3,12 +3,11 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-
+import "swiper/css/zoom";
 import "./swiperFeedback.css";
-import { dataFeedback } from "./data";
-import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import { EffectCoverflow, Pagination, Autoplay, Zoom } from "swiper";
 
-export default function SwiperFeedback() {
+export default function SwiperFeedback({ props }) {
   return (
     <>
       <h1 className="heading">What our clients say:</h1>
@@ -16,27 +15,29 @@ export default function SwiperFeedback() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
+        zoom={true}
         slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 0,
           stretch: 0,
-          depth: 100,
-          modifier: 1,
+          depth: 80,
+          modifier: 2,
           slideShadows: true,
         }}
         autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
+          delay: 2000,
+          disableOnInteraction: true,
         }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
+        pagination={{ clickable: true }}
+        modules={[EffectCoverflow, Pagination, Autoplay, Zoom]}
         className="mySwiper"
       >
-        {dataFeedback.map((item, index) => (
-          <SwiperSlide key={index}>
-            <img className="imageSlider" src={item.image} alt={item.name} />
-          </SwiperSlide>
-        ))}
+        {props &&
+          props.map((f, index) => (
+            <SwiperSlide key={f.id}>
+              <img className="imageSlider" src={f.imageUrl} alt="feedbacks" />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </>
   );

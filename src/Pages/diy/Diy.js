@@ -1,24 +1,19 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { dataWeddings } from "./dataweddings";
+import { dataDiy } from "./dataDiy";
 
-function Weddings() {
+function Diy() {
   return (
     <div>
       <ContainerImage>
         <img
           className="imagePanorama"
-          src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          src="https://images.unsplash.com/photo-1488806374796-a4071c52353b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           alt="img wedding"
         />
-        <TitleEvent>Weddings</TitleEvent>
+        <TitleEvent>Diy</TitleEvent>
       </ContainerImage>
       <ContainerBody>
-        <ContainerQuote>
-          "Being deeply loved by someone gives you strength, while loving
-          someone deeply gives you courage."
-          <p>- Lao Tzu</p>
-        </ContainerQuote>
         <ContainerText>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -37,28 +32,30 @@ function Weddings() {
             nisi. Nam eget dui.{" "}
           </p>
         </ContainerText>
-        {dataWeddings.map((data, index) => (
-          <ContainerBlog key={index}>
-            <ContainerImageBlog>
-              <ImageBlog
-                // style={{ width: "100%", height: "100%" }}
-                src={data.image}
-                alt="img wedding"
-              />
-            </ContainerImageBlog>
-            <ContainerDescriptionBlog>
-              <p>{data.date}</p>
-              <h3 style={{ fontSize: "1.5rem" }}>{data.title}</h3>
-              <LinkDetails>See more</LinkDetails>
-            </ContainerDescriptionBlog>
-          </ContainerBlog>
-        ))}
+        {dataDiy &&
+          dataDiy.map((data, index) => (
+            <ContainerBlog key={index}>
+              <ContainerDescriptionBlog>
+                <h4>{data.date}</h4>
+                <h4>{data.title}</h4>
+                <p>{data.description}</p>
+              </ContainerDescriptionBlog>
+
+              <VideoFrame
+                src={data.url}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></VideoFrame>
+            </ContainerBlog>
+          ))}
       </ContainerBody>
     </div>
   );
 }
 
-export default Weddings;
+export default Diy;
 
 const ContainerImage = styled.div`
   width: auto;
@@ -97,15 +94,6 @@ const ContainerBody = styled.div`
   } ;
 `;
 
-const ContainerQuote = styled.div`
-  text-align: center;
-
-  margin: 50px auto 50px auto;
-  font-family: "Dancing Script";
-  font-size: 2rem;
-  vertical-align: center;
-`;
-
 const ContainerText = styled.div`
   margin: 50px auto 110px auto;
   font-family: "Poppins", sans-serif;
@@ -127,10 +115,8 @@ const ContainerBlog = styled.div`
   height: auto;
   margin: 80px auto auto auto;
   font-family: "Poppins", sans-serif;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 600px) {
     max-width: 100%;
@@ -139,26 +125,26 @@ const ContainerBlog = styled.div`
     margin: 0 auto 50px auto;
     line-height: 7px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    grid-gap: 10px;
+
     font-size: 0.8rem;
   } ;
 `;
 
-const ContainerImageBlog = styled.div`
-  margin-left: 50px;
+// const ContainerImageBlog = styled.div`
+//   margin-left: 50px;
 
-  @media (max-width: 768px) {
-    margin-left: 0;
-    text-align: center;
-  } ;
-`;
+//   @media (max-width: 768px) {
+//     margin-left: 0;
+//     text-align: center;
+//   } ;
+// `;
 
-const ImageBlog = styled.img`
-  width: 450px;
-  height: 350px;
-
+const VideoFrame = styled.iframe`
+  display: block;
+  justify-content: center;
+  width: 560px;
+  height: 315px;
+  margin: 40px auto auto auto;
   @media (max-width: 768px) {
     width: 350px;
     height: 250px;
@@ -173,6 +159,6 @@ const ContainerDescriptionBlog = styled.div`
   } ;
 `;
 
-const LinkDetails = styled(Link)`
-  color: grey;
-`;
+// const LinkDetails = styled(Link)`
+//   color: grey;
+// `;

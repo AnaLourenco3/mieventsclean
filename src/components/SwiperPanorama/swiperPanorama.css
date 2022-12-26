@@ -1,9 +1,9 @@
 #SwiperPanorama { height: 100% }
 html,
-body {
+/* body {
   position: relative;
   height: 100%;
-}
+} */
 
 /* body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
