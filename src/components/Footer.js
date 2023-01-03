@@ -68,6 +68,26 @@ const FooterLink = styled(Link)`
   }
 `;
 
+const FooterLinkSocialMedia = styled.a`
+  color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  line-height: 17px;
+
+  &:hover {
+    text-decoration: underline;
+    transition: 200ms ease-in;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    font-size: 0.6rem;
+    line-height: 3px;
+  }
+`;
+
 const FootingParagraph = styled.div`
   color: white;
   margin-bottom: 20px;
@@ -75,10 +95,10 @@ const FootingParagraph = styled.div`
   font-size: 16px;
   line-height: 10px;
   align-items: center;
-  justify-content: center;
+
   @media (max-width: 768px) {
     display: flex;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 3px;
   }
 `;
@@ -152,27 +172,27 @@ const Footer = () => {
           <Column>
             <Heading>Social Media</Heading>
 
-            <FooterLink
+            <FooterLinkSocialMedia
               href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y="
               style={{ marginLeft: "10px" }}
             >
               <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Weddings
-            </FooterLink>
-            <FooterLink
+            </FooterLinkSocialMedia>
+            <FooterLinkSocialMedia
               href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y="
               style={{ marginLeft: "10px" }}
             >
               <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Events
-            </FooterLink>
-            <FooterLink
+            </FooterLinkSocialMedia>
+            <FooterLinkSocialMedia
               href="https://www.facebook.com/profile.php?id=100088437476729"
               style={{ marginLeft: "10px" }}
             >
               <BsFacebook />
-            </FooterLink>
-            <FooterLink href="#" style={{ marginLeft: "10px" }}>
+            </FooterLinkSocialMedia>
+            <FooterLinkSocialMedia href="#" style={{ marginLeft: "10px" }}>
               <BsPinterest />
-            </FooterLink>
+            </FooterLinkSocialMedia>
           </Column>
         </Row>
       </Container>

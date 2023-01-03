@@ -14,13 +14,13 @@ const ContainerImage = styled.div`
   text-align: center;
 `;
 
-const TitleEvent = styled.h1`
+const TitleEvent = styled.p`
   font-family: Amsterdam;
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 58%;
+  left: 52%;
   transform: translate(-50%, -50%);
   text-align: center;
   margin: auto;
@@ -215,7 +215,7 @@ function Contact() {
       <ContainerImage>
         <img
           className="imagePanorama"
-          src="https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80"
+          src="https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80"
           alt="img wedding"
         />
         <TitleEvent>Contact Me</TitleEvent>

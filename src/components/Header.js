@@ -45,7 +45,7 @@ const SocialMedia = styled.div`
   justify-content: space-between;
   align-items: center;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   @media (max-width: 768px) {
     display: flex;
     font-size: x-small;

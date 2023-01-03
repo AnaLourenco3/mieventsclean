@@ -60,7 +60,7 @@ function Weddings() {
               <ContainerDescriptionBlog>
                 <p>{item.date}</p>
                 <h3 style={{ fontSize: "1.5rem" }}>{item.title}</h3>
-                <LinkDetails>See more</LinkDetails>
+                <LinkDetails to="/category-details">See more</LinkDetails>
               </ContainerDescriptionBlog>
             </ContainerBlog>
           ))}
@@ -83,7 +83,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;

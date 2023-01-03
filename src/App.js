@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 
+import miLogo from "./components/logo3.png";
 import "./index.css";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
@@ -11,6 +12,7 @@ import Diy from "./Pages/diy/Diy";
 import HomePage from "./Pages/Homepage/HomePage";
 import Weddings from "./Pages/Weddings/Weddings/Weddings";
 import WeddingsDetails from "./Pages/Weddings/Weddings/WeddingsDetails";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const App = () => {
   return (
@@ -29,6 +31,11 @@ const App = () => {
 
           <Route path="/diy" element={<Diy />} />
         </Routes>
+        <FloatingWhatsApp
+          phoneNumber="31639112882"
+          accountName="Made By Mi"
+          avatar={miLogo}
+        />
       </div>
       <div>
         <Footer />
