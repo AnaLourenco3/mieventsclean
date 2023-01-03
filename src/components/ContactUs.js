@@ -1,11 +1,14 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 function ContactUs() {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Text>Lets Celebrate!</Text>
 
-      <Button>Contact Us</Button>
+      <Button onClick={() => navigate("/contact")}>Contact Us</Button>
     </Container>
   );
 }

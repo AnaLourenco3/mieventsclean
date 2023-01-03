@@ -1,8 +1,11 @@
-import { Fragment } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { GoLocation } from "react-icons/go";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
+import { BsPinterest } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 
 const ContainerImage = styled.div`
   width: auto;
@@ -111,7 +114,7 @@ const ContactWidgetItem = styled.div`
 const Icon = styled.div`
   height: 60px;
   width: 60px;
-  background: #abdbd9;
+  background: #99d3d1;
   border-radius: 50%;
   vertical-align: center;
   margin-right: 30px;
@@ -151,7 +154,7 @@ const Form = styled.form`
 
 const ContactForm = styled.div`
   text-align: center;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 `;
 
 const Input = styled.input`
@@ -191,7 +194,22 @@ const Iframe = styled.iframe`
   width: 100%;
 `;
 
+const SocialMedia = styled.div`
+  color: #99d3d1;
+
+  display: flex;
+  width: 30%;
+  margin: 50px auto 100px auto;
+  align-items: center;
+  justify-content: space-evenly;
+`;
+
 function Contact() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [text, setText] = useState("");
+
   return (
     <div>
       <ContainerImage>
@@ -266,16 +284,50 @@ function Contact() {
                   want a cost estimation, please specify the type of service and
                   number of guests. I will contact you back as soon as possible.
                 </Text>
-                <Input type="text" id="" placeholder="Name " />
-                <Input type="email" id="" placeholder="Email " />
-                <Input type="text" id="" placeholder="Telephone (optional) " />
-                <Textarea placeholder="Write to me here" />
+                <Input
+                  type="text"
+                  id=""
+                  placeholder="Name  "
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <Input
+                  type="email"
+                  id=""
+                  placeholder="Email "
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <Input
+                  type="text"
+                  id=""
+                  placeholder="Telephone (optional) "
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+                <Textarea
+                  placeholder="Write to me here"
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  required
+                />
                 <Button type="submit">Send</Button>
               </Form>
             </ContactForm>
           </Row>
         </Container>
       </Contacts>
+      <h1 style={{ textAlign: "center" }}>Social Media</h1>
+      <SocialMedia>
+        <BsInstagram style={{ fontSize: "2rem" }} />
+
+        <BsInstagram style={{ fontSize: "2rem" }} />
+
+        <BsFacebook style={{ fontSize: "2rem" }} />
+        <BsPinterest style={{ fontSize: "2rem" }} />
+      </SocialMedia>
       <MapColumn>
         <ContactMap>
           <Iframe

@@ -8,7 +8,7 @@ function WeddingsDetails() {
       <ContainerBlogDetails>
         <p>{dataWeddings[0].date}</p>
         <h2>{dataWeddings[0].title}</h2>
-        <p>{dataWeddings[0].text}</p>
+        <p>{dataWeddings[0]?.text}</p>
       </ContainerBlogDetails>
       <PhotoGalleryDetails />
     </ContainerBody>

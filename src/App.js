@@ -7,7 +7,7 @@ import "./index.css";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Diy from "./Pages/diy/Diy";
-import Events from "./Pages/Events/Events";
+
 import HomePage from "./Pages/Homepage/HomePage";
 import Weddings from "./Pages/Weddings/Weddings/Weddings";
 import WeddingsDetails from "./Pages/Weddings/Weddings/WeddingsDetails";
@@ -24,9 +24,9 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/weddings" element={<Weddings />} />
-          <Route path="/weddings/:id" element={<WeddingsDetails />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/category/:id" element={<Weddings />} />
+          <Route path="/category-details" element={<WeddingsDetails />} />
+
           <Route path="/diy" element={<Diy />} />
         </Routes>
       </div>

@@ -24,6 +24,7 @@ function HomePage() {
         <SwiperPanorama />
       </ContainerCarouselSlider>
       <ImageGrid />
+
       <ContactUs />
       <ContainerFeedbackSlider>
         <SwiperFeedback props={feedbacks} />

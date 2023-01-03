@@ -1,58 +1,69 @@
-import { Link } from "react-router-dom";
+// import { dataWeddings } from "./dataweddings";
+
 import styled from "styled-components";
-import { dataWeddings } from "./dataweddings";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useParams } from "react-router-dom";
+import {
+  selectBlogsData,
+  selectCategoryData,
+} from "../../../store/categories/selectors";
+import { fetchBlogDataPerCategory } from "../../../store/categories/thunks";
 
 function Weddings() {
+  const dispatch = useDispatch();
+  const { id } = useParams();
+
+  const blogsData = useSelector(selectBlogsData);
+  const categoryData = useSelector(selectCategoryData);
+  console.log("from data category", categoryData);
+
+  // console.log("from data blogs", blogsData);
+
+  useEffect(() => {
+    dispatch(fetchBlogDataPerCategory(id));
+  }, [dispatch, id]);
+
+  if (!blogsData) return <p>Loading...</p>;
+
   return (
     <div>
-      <ContainerImage>
-        <img
-          className="imagePanorama"
-          src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-          alt="img wedding"
-        />
-        <TitleEvent>Weddings</TitleEvent>
-      </ContainerImage>
+      {categoryData && (
+        <ContainerImage>
+          <img
+            className="imagePanorama"
+            src={categoryData.imageUrl}
+            alt="img wedding"
+          />
+          <TitleEvent>{categoryData.name}</TitleEvent>
+        </ContainerImage>
+      )}
       <ContainerBody>
-        <ContainerQuote>
-          "Being deeply loved by someone gives you strength, while loving
-          someone deeply gives you courage."
-          <p>- Lao Tzu</p>
-        </ContainerQuote>
-        <ContainerText>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-            semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-            nisi. Nam eget dui.{" "}
-          </p>
-        </ContainerText>
-        {dataWeddings.map((data, index) => (
-          <ContainerBlog key={index}>
-            <ContainerImageBlog>
-              <ImageBlog
-                // style={{ width: "100%", height: "100%" }}
-                src={data.image}
-                alt="img wedding"
-              />
-            </ContainerImageBlog>
-            <ContainerDescriptionBlog>
-              <p>{data.date}</p>
-              <h3 style={{ fontSize: "1.5rem" }}>{data.title}</h3>
-              <LinkDetails>See more</LinkDetails>
-            </ContainerDescriptionBlog>
-          </ContainerBlog>
-        ))}
+        {categoryData && (
+          <div>
+            <ContainerQuote>{categoryData.quote}</ContainerQuote>
+            <ContainerText>
+              <p>{categoryData.description}</p>
+            </ContainerText>{" "}
+          </div>
+        )}
+        {blogsData &&
+          blogsData.map((item, index) => (
+            <ContainerBlog key={index}>
+              <ContainerImageBlog>
+                <ImageBlog
+                  // style={{ width: "100%", height: "100%" }}
+                  src={item.mainImageUrl}
+                  alt="img wedding"
+                />
+              </ContainerImageBlog>
+              <ContainerDescriptionBlog>
+                <p>{item.date}</p>
+                <h3 style={{ fontSize: "1.5rem" }}>{item.title}</h3>
+                <LinkDetails>See more</LinkDetails>
+              </ContainerDescriptionBlog>
+            </ContainerBlog>
+          ))}
       </ContainerBody>
     </div>
   );
@@ -67,12 +78,12 @@ const ContainerImage = styled.div`
   text-align: center;
 `;
 
-const TitleEvent = styled.h1`
+const TitleEvent = styled.p`
   font-family: Amsterdam;
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;

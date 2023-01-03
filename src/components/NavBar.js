@@ -23,11 +23,12 @@ const Navbar = () => {
           <NavLink style={{ textDecoration: "none" }}>
             Weddings <RiArrowDropDownLine />
           </NavLink>
+          {/* <Link to={`/blogs/${b.id}`}>See more</Link> */}
           <NavbarDropdownContent>
-            <NavLink to="/weddings">Marriage Proposal</NavLink>{" "}
-            <NavLink to="/weddings">Bachelorette Party</NavLink>
-            <NavLink to="/weddings">Wedding</NavLink>
-            <NavLink to="/weddings">Vow Renewal</NavLink>
+            <NavLink to="/category/2">Wedding Proposal</NavLink>{" "}
+            <NavLink to="/category/3">Bachelorette Party</NavLink>
+            <NavLink to="/category/1">Wedding</NavLink>
+            <NavLink to="/category/4">Vow Renewal</NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavbarDropdown>
@@ -35,16 +36,16 @@ const Navbar = () => {
             Parties&Events <RiArrowDropDownLine />
           </NavLink>
           <NavbarDropdownContent>
-            <NavLink to="/weddings">Child Birthday</NavLink>{" "}
-            <NavLink to="/weddings">Adult Birthday</NavLink>
-            <NavLink to="/weddings">Baptism</NavLink>
-            <NavLink to="/weddings">Baby Shower</NavLink>
-            <NavLink to="/weddings">Gender Revelation</NavLink>
-            <NavLink to="/wedding">Other Events</NavLink>
+            <NavLink to="/category/8">Child Birthday</NavLink>{" "}
+            <NavLink to="/category/9">Adult Birthday</NavLink>
+            <NavLink to="/category/5">Baptism</NavLink>
+            <NavLink to="/category/6">Baby Shower</NavLink>
+            <NavLink to="/category/7">Gender Reveal</NavLink>
+            <NavLink to="/category/10">Other Events</NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavLink to="/diy">Diy</NavLink>
-        <NavLink to="/blog">Blog</NavLink>
+        {/* <NavLink to="/blog">Blog</NavLink> */}
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </Menu>
