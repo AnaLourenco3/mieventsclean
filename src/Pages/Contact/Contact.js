@@ -58,7 +58,7 @@ function Contact() {
       <ContainerImage>
         <img
           className="imagePanorama"
-          src="https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199168.24109346297!2d-9.30079440323782!3d38.74067577922809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa%2C%20Portugal!5e0!3m2!1spt-PT!2snl!4v1673001310092!5m2!1spt-PT!2snl"
           alt="img wedding"
         />
         <TitleEvent>Contact Me</TitleEvent>
@@ -81,7 +81,7 @@ function Contact() {
                 </Icon>
                 <Text>
                   <P>Adress:</P>
-                  <p>Charneca da Caparica</p>
+                  <p>Lisboa e vale do Tejo</p>
                 </Text>
               </ContactWidgetItem>
               <ContactWidgetItem>
