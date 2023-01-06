@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import {
   selectBlogsData,
   selectCategoryData,
@@ -12,15 +12,20 @@ import { fetchBlogDataPerCategory } from "../../../store/categories/thunks";
 
 function Weddings() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams();
 
   const blogsData = useSelector(selectBlogsData);
+
   const categoryData = useSelector(selectCategoryData);
   console.log("from data category", categoryData);
 
   // console.log("from data blogs", blogsData);
 
   useEffect(() => {
+    if (id > 10) {
+      navigate("/");
+    }
     dispatch(fetchBlogDataPerCategory(id));
   }, [dispatch, id]);
 
@@ -60,7 +65,7 @@ function Weddings() {
               <ContainerDescriptionBlog>
                 <p>{item.date}</p>
                 <h3 style={{ fontSize: "1.5rem" }}>{item.title}</h3>
-                <LinkDetails to="/category-details">See more</LinkDetails>
+                <LinkDetails to={`/blog/${item.id}`}>See more</LinkDetails>
               </ContainerDescriptionBlog>
             </ContainerBlog>
           ))}

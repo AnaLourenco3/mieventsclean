@@ -44,7 +44,7 @@ const Navbar = () => {
             <NavLink to="/category/10">Other Events</NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
-        <NavLink to="/diy">Diy</NavLink>
+        <NavLink to="/diy/11">Diy</NavLink>
         {/* <NavLink to="/blog">Blog</NavLink> */}
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>

@@ -34,7 +34,7 @@ const data = [
   },
 ];
 
-const PhotoGalleryDetails = () => {
+const PhotoGalleryDetails = ({ blogData }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
 
@@ -94,15 +94,16 @@ const PhotoGalleryDetails = () => {
       <br /><br /> */}
 
       <div className="galleryWrap">
-        {data &&
-          data.map((slide, index) => {
+        {blogData &&
+          blogData.blogImages &&
+          blogData.blogImages.map((slide, index) => {
             return (
               <div
                 className="single"
                 key={index}
                 onClick={() => handleOpenModal(index)}
               >
-                <img src={slide.link} alt="" />
+                <img src={slide.imagesUrl} alt="" />
               </div>
             );
           })}

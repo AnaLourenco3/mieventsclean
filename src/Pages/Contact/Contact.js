@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { GoLocation } from "react-icons/go";
 import { BsTelephone } from "react-icons/bs";
@@ -6,6 +6,222 @@ import { FiMail } from "react-icons/fi";
 import { BsPinterest } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
+
+function Contact() {
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send("service_3yal0sc", "template_fb0t94o", values, "PzYI6GKwju1rbDTzI")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response);
+          setValues({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+          setStatus("SUCCESS");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+
+  useEffect(() => {
+    if (status === "SUCCESS") {
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+    }
+  }, [status]);
+
+  const handleChange = (e) => {
+    setValues((values) => ({
+      ...values,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  return (
+    <div>
+      <ContainerImage>
+        <img
+          className="imagePanorama"
+          src="https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80"
+          alt="img wedding"
+        />
+        <TitleEvent>Contact Me</TitleEvent>
+      </ContainerImage>
+      <Contacts>
+        <Container>
+          <Row>
+            <ContactWidget>
+              <ContactWidgetItem>
+                <Icon>
+                  <GoLocation
+                    style={{
+                      color: "white",
+                      fontSize: "30px",
+
+                      marginTop: "15px",
+                      marginLeft: "15px",
+                    }}
+                  />
+                </Icon>
+                <Text>
+                  <P>Adress:</P>
+                  <p>Charneca da Caparica</p>
+                </Text>
+              </ContactWidgetItem>
+              <ContactWidgetItem>
+                <Icon>
+                  <BsTelephone
+                    style={{
+                      color: "white",
+                      fontSize: "30px",
+
+                      marginTop: "15px",
+                      marginLeft: "13px",
+                    }}
+                  />
+                </Icon>
+                <Text>
+                  <P>Telephone:</P>
+                  <p>+351 964345526 </p>
+                </Text>
+              </ContactWidgetItem>
+              <ContactWidgetItem>
+                <Icon>
+                  <FiMail
+                    style={{
+                      color: "white",
+                      fontSize: "30px",
+
+                      marginTop: "15px",
+                      marginLeft: "15px",
+                    }}
+                  />
+                </Icon>
+                <Text>
+                  <P>Mail:</P>
+                  <p>madebymieventos@gmail.com</p>
+                </Text>
+              </ContactWidgetItem>
+            </ContactWidget>
+
+            <ContactForm>
+              <Form onSubmit={handleSubmit}>
+                <Text style={{ marginBottom: "15px" }}>
+                  Dear client, feel free to contact me for any questions. If you
+                  want a cost estimation, please specify the type of service and
+                  number of guests. I will contact you back as soon as possible.
+                </Text>
+                <Input
+                  type="text"
+                  id=""
+                  placeholder="Name  "
+                  name="name"
+                  value={values.name}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="email"
+                  id=""
+                  placeholder="Email "
+                  value={values.email}
+                  onChange={handleChange}
+                  name="email"
+                  required
+                />
+                <Input
+                  type="text"
+                  id=""
+                  placeholder="Telephone (optional) "
+                  value={values.phone}
+                  onChange={handleChange}
+                  required
+                  name="phone"
+                />
+                <Textarea
+                  placeholder="Write to me here"
+                  value={values.message}
+                  onChange={handleChange}
+                  name="message"
+                  required
+                />
+                <Button type="submit">Send</Button>
+                {status && renderAlert()}
+              </Form>
+            </ContactForm>
+          </Row>
+        </Container>
+      </Contacts>
+      <h1 style={{ textAlign: "center" }}>Social Media</h1>
+      <SocialMedia>
+        <BsInstagram style={{ fontSize: "2rem" }} />
+
+        <BsInstagram style={{ fontSize: "2rem" }} />
+
+        <BsFacebook style={{ fontSize: "2rem" }} />
+        <BsPinterest style={{ fontSize: "2rem" }} />
+      </SocialMedia>
+      <MapColumn>
+        <ContactMap>
+          <Iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99781.78019015178!2d-9.254638002639227!3d38.59871252737117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd194ac9795975ed%3A0x500ebbde4905640!2sCharneca%20de%20Caparica%2C%20Portugal!5e0!3m2!1spt-PT!2sit!4v1672049121854!5m2!1spt-PT!2sit"
+            title="Google Maps"
+            height="550"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></Iframe>
+        </ContactMap>
+      </MapColumn>
+    </div>
+  );
+}
+
+const renderAlert = () => (
+  <RenderAlert>
+    <p>Your message was submitted successfully!</p>
+  </RenderAlert>
+);
+
+export default Contact;
+
+// serviceID: service_3yal0sc
+// templateID: template_fb0t94o
+// public key: PzYI6GKwju1rbDTzI
+
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   emailjs.send('service_3yal0sc', 'template_fb0t94o', values, 'PzYI6GKwju1rbDTzI');
+
+const RenderAlert = styled.div`
+  padding: 3px 0px 3px 0;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+  background: rgba(153, 211, 209, 0.5);
+
+  border-radius: 50px;
+  width: 100%;
+  margin: 5px 0 0px 5px;
+`;
+
+// className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded mb-5 text-center"
 
 const ContainerImage = styled.div`
   width: auto;
@@ -203,146 +419,3 @@ const SocialMedia = styled.div`
   align-items: center;
   justify-content: space-evenly;
 `;
-
-function Contact() {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [text, setText] = useState("");
-
-  return (
-    <div>
-      <ContainerImage>
-        <img
-          className="imagePanorama"
-          src="https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80"
-          alt="img wedding"
-        />
-        <TitleEvent>Contact Me</TitleEvent>
-      </ContainerImage>
-      <Contacts>
-        <Container>
-          <Row>
-            <ContactWidget>
-              <ContactWidgetItem>
-                <Icon>
-                  <GoLocation
-                    style={{
-                      color: "white",
-                      fontSize: "30px",
-
-                      marginTop: "15px",
-                      marginLeft: "15px",
-                    }}
-                  />
-                </Icon>
-                <Text>
-                  <P>Adress:</P>
-                  <p>Charneca da Caparica</p>
-                </Text>
-              </ContactWidgetItem>
-              <ContactWidgetItem>
-                <Icon>
-                  <BsTelephone
-                    style={{
-                      color: "white",
-                      fontSize: "30px",
-
-                      marginTop: "15px",
-                      marginLeft: "13px",
-                    }}
-                  />
-                </Icon>
-                <Text>
-                  <P>Telephone:</P>
-                  <p>+351 964345526 </p>
-                </Text>
-              </ContactWidgetItem>
-              <ContactWidgetItem>
-                <Icon>
-                  <FiMail
-                    style={{
-                      color: "white",
-                      fontSize: "30px",
-
-                      marginTop: "15px",
-                      marginLeft: "15px",
-                    }}
-                  />
-                </Icon>
-                <Text>
-                  <P>Mail:</P>
-                  <p>madebymieventos@gmail.com</p>
-                </Text>
-              </ContactWidgetItem>
-            </ContactWidget>
-
-            <ContactForm>
-              <Form action="#">
-                <Text style={{ marginBottom: "15px" }}>
-                  Dear client, feel free to contact me for any questions. If you
-                  want a cost estimation, please specify the type of service and
-                  number of guests. I will contact you back as soon as possible.
-                </Text>
-                <Input
-                  type="text"
-                  id=""
-                  placeholder="Name  "
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <Input
-                  type="email"
-                  id=""
-                  placeholder="Email "
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <Input
-                  type="text"
-                  id=""
-                  placeholder="Telephone (optional) "
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  required
-                />
-                <Textarea
-                  placeholder="Write to me here"
-                  value={text}
-                  onChange={(e) => setText(e.target.value)}
-                  required
-                />
-                <Button type="submit">Send</Button>
-              </Form>
-            </ContactForm>
-          </Row>
-        </Container>
-      </Contacts>
-      <h1 style={{ textAlign: "center" }}>Social Media</h1>
-      <SocialMedia>
-        <BsInstagram style={{ fontSize: "2rem" }} />
-
-        <BsInstagram style={{ fontSize: "2rem" }} />
-
-        <BsFacebook style={{ fontSize: "2rem" }} />
-        <BsPinterest style={{ fontSize: "2rem" }} />
-      </SocialMedia>
-      <MapColumn>
-        <ContactMap>
-          <Iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99781.78019015178!2d-9.254638002639227!3d38.59871252737117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd194ac9795975ed%3A0x500ebbde4905640!2sCharneca%20de%20Caparica%2C%20Portugal!5e0!3m2!1spt-PT!2sit!4v1672049121854!5m2!1spt-PT!2sit"
-            title="Google Maps"
-            height="550"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></Iframe>
-        </ContactMap>
-      </MapColumn>
-    </div>
-  );
-}
-
-export default Contact;

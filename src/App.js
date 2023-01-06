@@ -27,9 +27,9 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/category/:id" element={<Weddings />} />
-          <Route path="/category-details" element={<WeddingsDetails />} />
+          <Route path="/blog/:id" element={<WeddingsDetails />} />
 
-          <Route path="/diy" element={<Diy />} />
+          <Route path="/diy/:id" element={<Diy />} />
         </Routes>
         <FloatingWhatsApp
           phoneNumber="31639112882"

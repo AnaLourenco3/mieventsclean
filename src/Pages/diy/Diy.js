@@ -1,52 +1,71 @@
-// import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { dataDiy } from "./dataDiy";
+
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  selectBlogsData,
+  selectCategoryData,
+} from "../../store/categories/selectors";
+import { fetchBlogDataPerCategory } from "../../store/categories/thunks";
 
 function Diy() {
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const blogsData = useSelector(selectBlogsData);
+
+  const categoryData = useSelector(selectCategoryData);
+  console.log("from data category", categoryData);
+
+  // console.log("from data blogs", blogsData);
+
+  useEffect(() => {
+    // if (id !== 11) {
+    //   navigate("/");
+    // }
+    dispatch(fetchBlogDataPerCategory(id));
+  }, [dispatch, id]);
+
+  if (!blogsData) return <p>Loading...</p>;
   return (
     <div>
-      <ContainerImage>
-        <img
-          className="imagePanorama"
-          src="https://images.unsplash.com/photo-1488806374796-a4071c52353b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="img wedding"
-        />
-        <TitleEvent>Diy</TitleEvent>
-      </ContainerImage>
+      {categoryData && (
+        <ContainerImage>
+          <img
+            className="imagePanorama"
+            src={categoryData.imageUrl}
+            alt="img wedding"
+          />
+          <TitleEvent>{categoryData.name}</TitleEvent>
+        </ContainerImage>
+      )}
       <ContainerBody>
-        <ContainerText>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-            semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-            porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-            ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-            nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-            Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
-            nisi. Nam eget dui.{" "}
-          </p>
-        </ContainerText>
-        {dataDiy &&
-          dataDiy.map((data, index) => (
+        {categoryData && (
+          <div>
+            <ContainerQuote>{categoryData.quote}</ContainerQuote>
+            <ContainerText>
+              <p>{categoryData.description}</p>
+            </ContainerText>{" "}
+          </div>
+        )}
+        {blogsData &&
+          blogsData.map((data, index) => (
             <ContainerBlog key={index}>
               <ContainerDescriptionBlog>
                 <h4>{data.date}</h4>
                 <h4>{data.title}</h4>
-                <p>{data.description}</p>
+                <p>{data.text}</p>
               </ContainerDescriptionBlog>
 
               <VideoFrame
-                src={data.url}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                src={data.videoUrl}
+                width="320"
+                height="564"
+                title="diy"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
               ></VideoFrame>
             </ContainerBlog>
           ))}
@@ -130,6 +149,14 @@ const ContainerBlog = styled.div`
   } ;
 `;
 
+const ContainerQuote = styled.div`
+  text-align: center;
+
+  margin: 50px auto 50px auto;
+  font-family: "Dancing Script";
+  font-size: 2rem;
+  vertical-align: center;
+`;
 // const ContainerImageBlog = styled.div`
 //   margin-left: 50px;
 
@@ -142,13 +169,13 @@ const ContainerBlog = styled.div`
 const VideoFrame = styled.iframe`
   display: block;
   justify-content: center;
-  width: 560px;
-  height: 315px;
+  border: black;
+
   margin: 40px auto auto auto;
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     width: 350px;
     height: 250px;
-  } ;
+  } ; */
 `;
 
 const ContainerDescriptionBlog = styled.div`
