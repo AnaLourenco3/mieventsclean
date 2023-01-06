@@ -30,10 +30,22 @@ function WeddingsDetails() {
         <div>
           <p>{blogData.date}</p>
           <h2>{blogData.title}</h2>
-          <p>{blogData.text}</p>{" "}
+          <p style={{ textAlign: "left" }}>{blogData.text}</p>{" "}
         </div>
       </ContainerBlogDetails>
+
       <PhotoGalleryDetails blogData={blogData} />
+      <ContainerBlogDetails>
+        <VideoFrame
+          src={blogData?.videoUrl}
+          width="320"
+          height="564"
+          title="diy"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></VideoFrame>
+      </ContainerBlogDetails>
     </ContainerBody>
   );
 }
@@ -61,8 +73,16 @@ const ContainerBody = styled.div`
 const ContainerBlogDetails = styled.div`
   font-size: 1rem;
   margin-bottom: 70px;
+
   @media (max-width: 768px) {
     font-size: 0.8rem;
     margin-bottom: 40px;
   } ;
+`;
+
+const VideoFrame = styled.iframe`
+  display: inline-block;
+  justify-content: center;
+  border: black;
+  margin-top: 70px;
 `;

@@ -24,10 +24,10 @@ export default function SwiperFeedback({ props }) {
           modifier: 2,
           slideShadows: true,
         }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: true,
-        }}
+        // autoplay={{
+        //   delay: 2000,
+        //   disableOnInteraction: true,
+        // }}
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination, Autoplay, Zoom]}
         className="mySwiper"
