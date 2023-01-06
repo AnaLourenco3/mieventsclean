@@ -81,7 +81,7 @@ function Contact() {
                 </Icon>
                 <Text>
                   <P>Adress:</P>
-                  <p>Lisboa e vale do Tejo</p>
+                  <p>Lisboa e Vale do Tejo</p>
                 </Text>
               </ContactWidgetItem>
               <ContactWidgetItem>
@@ -179,7 +179,7 @@ function Contact() {
       <MapColumn>
         <ContactMap>
           <Iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99781.78019015178!2d-9.254638002639227!3d38.59871252737117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd194ac9795975ed%3A0x500ebbde4905640!2sCharneca%20de%20Caparica%2C%20Portugal!5e0!3m2!1spt-PT!2sit!4v1672049121854!5m2!1spt-PT!2sit"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199168.24109346297!2d-9.30079440323782!3d38.74067577922809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa%2C%20Portugal!5e0!3m2!1spt-PT!2snl!4v1673001552434!5m2!1spt-PT!2snl"
             title="Google Maps"
             height="550"
             style={{ border: 0 }}
