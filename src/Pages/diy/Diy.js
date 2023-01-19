@@ -79,7 +79,7 @@ export default Diy;
 const ContainerImage = styled.div`
   width: auto;
   height: 500px;
-  margin: 165px 0 0 0;
+  margin: 135px 0 0 0;
   text-align: center;
 `;
 
