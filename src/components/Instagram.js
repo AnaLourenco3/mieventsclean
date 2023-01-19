@@ -6,7 +6,7 @@ function Instagram() {
       style={{
         display: "flex",
         justifyContent: "center",
-        marginTop: "50px",
+        margin: "80px 0 100px 0",
         gap: "20px",
       }}
     >
