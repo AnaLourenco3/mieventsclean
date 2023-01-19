@@ -6,7 +6,7 @@ import miLogo from "./components/logo3.png";
 import "./index.css";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
-import Diy from "./Pages/Diy/Diy";
+import Diy from "./Pages/diy/Diy";
 import HomePage from "./Pages/Homepage/HomePage";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import CategoryBlogList from "./Pages/Categories/CategoryBlogList";
