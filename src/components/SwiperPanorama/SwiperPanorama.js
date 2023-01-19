@@ -25,10 +25,10 @@ export default function SwiperPanorama() {
           <div>
             <div className="imgTitle">Weddings</div>
             <div className="services">
-              <p>Wedding proposals</p>
-              <p>Bachelorette parties</p>
+              <p>Wedding Proposals</p>
+              <p>Bachelorette Parties</p>
               <p>Weddings</p>
-              <p>Vow renewals</p>
+              <p>Vow Renewals</p>
             </div>
           </div>
           <div>
@@ -36,9 +36,9 @@ export default function SwiperPanorama() {
             <div className="services1">
               <p>Baptisms</p>
               <p>Baby Showers</p>
-              <p>Gender revelation</p>
-              <p>Birthday parties for children</p>
-              <p>Birthday parties for adults</p>
+              <p>Gender Revelation</p>
+              <p>Birthday Parties for Children</p>
+              <p>Birthday Parties for Adults</p>
               <p>Other events</p>
             </div>
           </div>
@@ -52,10 +52,10 @@ export default function SwiperPanorama() {
           <div>
             <div className="imgTitle">Weddings</div>
             <div className="services">
-              <p>Wedding proposals</p>
-              <p>Bachelorette parties</p>
+              <p>Wedding Proposals</p>
+              <p>Bachelorette Parties</p>
               <p>Weddings</p>
-              <p>Vow renewals</p>
+              <p>Vow Renewals</p>
             </div>
           </div>
           <div>
@@ -63,10 +63,10 @@ export default function SwiperPanorama() {
             <div className="services1">
               <p>Baptisms</p>
               <p>Baby Showers</p>
-              <p>Gender revelation</p>
-              <p>Birthday parties for children</p>
-              <p>Birthday parties for adults</p>
-              <p>Other events</p>
+              <p>Gender Revelation</p>
+              <p>Birthday Parties for Children</p>
+              <p>Birthday Parties for Adults</p>
+              <p>Other Events</p>
             </div>
           </div>
         </SwiperSlide>

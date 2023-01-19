@@ -28,24 +28,51 @@ function About() {
 
         <ContainerText>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            odio mauris, facilisis sed lorem id, elementum malesuada justo.
-            Morbi eget dui vitae leo fermentum posuere quis eu nisl. Phasellus
-            faucibus est vel nibh dapibus eleifend. Aenean molestie arcu et odio
-            tincidunt facilisis. Vestibulum mauris erat, euismod eget maximus
-            non, finibus quis risus. Morbi sed eros eu enim dignissim facilisis.
-            Sed tincidunt venenatis augue, a faucibus felis tempor id. Quisque
-            id lorem elementum, sodales lectus eget, mollis dolor. Fusce
-            pharetra, urna eget euismod sodales, sem nunc blandit libero,
-            volutpat efficitur massa neque ac ipsum. Duis viverra metus vitae
-            massa posuere tincidunt. Nunc id hendrerit odio, nec pulvinar dolor.
-            Nulla id tristique magna. Proin iaculis tortor vel est convallis,
-            quis scelerisque ex blandit. Maecenas et neque laoreet, aliquet erat
-            ac, interdum ipsum. Curabitur posuere volutpat ipsum, vel aliquet
-            lorem posuere bibendum. Maecenas arcu sem, ullamcorper non maximus
-            in, blandit vel nunc. Mauris eu magna varius, maximus orci at,
-            feugiat tortor. Fusce consequat lectus vel nunc ultrices, vel
-            gravida lectus elementum.
+            <h3>Miriam Recacho Head of Training & Event Planner</h3>
+            <p>
+              Desde pequena que sempre quis trabalhar diretamente com pessoas,
+              contribuindo para a sua felicidade e bem-estar. Licenciou-se em
+              Psicologia e especializou-se em Clínica e Aconselhamento, mas
+              durante toda a sua vida trabalhou sempre direta e indiretamente
+              com eventos. O seu foco em ajudar quem a procura veio a
+              direcionar-se para esta área tão especial como a de concretizar
+              momentos únicos e inesquecíveis. {" "}
+            </p>
+            <p>
+              “Participar destes momentos de celebração, poder organizar e
+              tratar de todos os detalhes - que fazem toda a diferença, é a
+              minha maior satisfação!”{" "}
+            </p>
+            <p>
+              Com o intuito de oferecer sempre um serviço de excelência, procura
+              manter-se informada, atualizada e constantemente acrescentar
+              competências nas mais diversas áreas, nomeadamente Wedding
+              Planning, Organização e Decoração de Eventos, Design Floral,
+              Design Gráfico e Estacionário. Conta com mais de 12 anos de
+              experiência a gerir equipas e reúne como principais
+              características ser comunicativa, criativa, organizada, rigorosa e
+              muito perfeccionista.
+            </p>
+            <h4>
+              {" "}
+              “A «made by mi» surge na vontade de partilhar e expandir uma
+              grande paixão - contribuir para tornar momentos importantes dos
+              que me procuram, em eventos únicos e memoráveis!”{" "}
+            </h4>
+
+            <p>
+              {" "}
+              “O meu compromisso é a minha entrega a cada projeto, dar sempre o
+              meu melhor e procurar superar expectativas. Cada evento é único e
+              especial! É feito à medida, inteiramente personalizado e deve ser
+              vivido em pleno pelos seus protagonistas. Quer seja o dia mais
+              feliz das suas vidas, ou o festejo de um acontecimento que tenha
+              significado! 
+              <b>
+                A vida merece ser (celebrada e) recheada de motivos para
+                celebrar! Vamos celebrá-la?”{" "}
+              </b>
+            </p>
             <Signature>With love, Miriam Recacho</Signature>
           </Text>
         </ContainerText>
