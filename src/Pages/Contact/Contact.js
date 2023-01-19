@@ -233,7 +233,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 58%;
+  top: 52%;
   left: 52%;
   transform: translate(-50%, -50%);
   text-align: center;
