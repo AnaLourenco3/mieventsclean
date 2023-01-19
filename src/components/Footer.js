@@ -166,8 +166,8 @@ const Footer = () => {
             <FooterLink to="/category/5">Baptism</FooterLink>
             <FooterLink to="/category/6">Baby Shower</FooterLink>
             <FooterLink to="/category/7">Gender Reveal</FooterLink>
-            <FooterLink to="/category/8">Children birthday party</FooterLink>
-            <FooterLink to="/category/9">Adult birthday party</FooterLink>
+            <FooterLink to="/category/8">Children Birthday Party</FooterLink>
+            <FooterLink to="/category/9">Adult Birthday Party</FooterLink>
             <FooterLink to="/category/10">Other Events</FooterLink>
           </Column>
           <Column>

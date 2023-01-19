@@ -57,7 +57,7 @@ const Navbar = () => {
             </NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
-        <NavLink to="/diy/11">Diy</NavLink>
+        <NavLink to="/diy/11">DIY</NavLink>
         {/* <NavLink to="/blog">Blog</NavLink> */}
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
