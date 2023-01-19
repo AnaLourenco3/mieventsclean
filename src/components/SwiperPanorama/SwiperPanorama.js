@@ -39,7 +39,7 @@ export default function SwiperPanorama() {
               <p>Gender Revelation</p>
               <p>Birthday Parties for Children</p>
               <p>Birthday Parties for Adults</p>
-              <p>Other events</p>
+              <p>Other Events</p>
             </div>
           </div>
         </SwiperSlide>
