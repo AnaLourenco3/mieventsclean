@@ -1,15 +1,9 @@
 import { InstagramEmbed } from "react-social-media-embed";
+import styled from "styled-components";
 
 function Instagram() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        margin: "80px 0 100px 0",
-        gap: "20px",
-      }}
-    >
+    <InstaContainer>
       <InstagramEmbed
         url="https://www.instagram.com/p/Cjyfo2cM4kW/"
         width={328}
@@ -31,8 +25,16 @@ function Instagram() {
         captioned={false}
         placeholderDisabled
       />
-    </div>
+    </InstaContainer>
   );
 }
 
 export default Instagram;
+
+const InstaContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 100px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+`;
