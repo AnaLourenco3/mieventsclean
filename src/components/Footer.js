@@ -145,7 +145,8 @@ const Footer = () => {
               964345526
             </FootingParagraph>
             <FootingParagraph>
-              <ImLocation style={{ marginRight: "5px" }} /> Charneca da Caparica
+              <ImLocation style={{ marginRight: "5px" }} /> Lisboa e Vale do
+              Tejo
             </FootingParagraph>
 
             <FooterLink to="/about" style={{ marginTop: "20px" }}>
