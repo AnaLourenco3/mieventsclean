@@ -20,14 +20,14 @@ export default function SwiperFeedback({ props }) {
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
-          depth: 80,
-          modifier: 2,
-          slideShadows: true,
+          depth: 300,
+          modifier: 1,
+          slideShadows: false,
         }}
-        // autoplay={{
-        //   delay: 2000,
-        //   disableOnInteraction: true,
-        // }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination, Autoplay, Zoom]}
         className="mySwiper"

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import SwiperPanorama from "../../components/SwiperPanorama/SwiperPanorama";
 import ImageGrid from "../../components/ImageGrid/ImageGrid";
-import ContactUs from "../../components/ContactUs";
 import SwiperFeedback from "../../components/SwiperFeedback/SwiperFeedback";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchFeedbacks } from "../../store/feedback/thunks";
 import { selectFeedbacks } from "../../store/feedback/selectors";
+import Instagram from "../../components/Instagram";
+import ContactUsHomepage from "../../components/ContactUsHomepage";
 
 function HomePage() {
   const dispatch = useDispatch();
@@ -25,7 +26,8 @@ function HomePage() {
       </ContainerCarouselSlider>
       <ImageGrid />
 
-      <ContactUs />
+      <ContactUsHomepage />
+      <Instagram />
       <ContainerFeedbackSlider>
         <SwiperFeedback props={feedbacks} />
       </ContainerFeedbackSlider>
@@ -38,7 +40,7 @@ export default HomePage;
 const ContainerCarouselSlider = styled.div`
   width: auto;
   height: auto;
-  margin: 105px 0 70px 0;
+  margin: 75px 0 70px 0;
 `;
 
 const ContainerFeedbackSlider = styled.div`

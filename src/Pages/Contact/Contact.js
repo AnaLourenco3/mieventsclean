@@ -169,11 +169,15 @@ function Contact() {
       </Contacts>
       <h1 style={{ textAlign: "center" }}>Social Media</h1>
       <SocialMedia>
-        <BsInstagram style={{ fontSize: "2rem" }} />
-
-        <BsInstagram style={{ fontSize: "2rem" }} />
-
-        <BsFacebook style={{ fontSize: "2rem" }} />
+        <SocialMediaLink href="https://www.instagram.com/madebymievents/">
+          <BsInstagram style={{ fontSize: "2rem" }} />
+        </SocialMediaLink>
+        <SocialMediaLink href="https://www.instagram.com/madebymiweddings/">
+          <BsInstagram style={{ fontSize: "2rem" }} />
+        </SocialMediaLink>
+        <SocialMediaLink href="https://www.facebook.com/profile.php?id=100088437476729">
+          <BsFacebook style={{ fontSize: "2rem" }} />{" "}
+        </SocialMediaLink>
         <BsPinterest style={{ fontSize: "2rem" }} />
       </SocialMedia>
       <MapColumn>
@@ -201,14 +205,6 @@ const renderAlert = () => (
 
 export default Contact;
 
-// serviceID: service_3yal0sc
-// templateID: template_fb0t94o
-// public key: PzYI6GKwju1rbDTzI
-
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-//   emailjs.send('service_3yal0sc', 'template_fb0t94o', values, 'PzYI6GKwju1rbDTzI');
-
 const RenderAlert = styled.div`
   padding: 3px 0px 3px 0;
   line-height: 1.5;
@@ -221,12 +217,10 @@ const RenderAlert = styled.div`
   margin: 5px 0 0px 5px;
 `;
 
-// className="px-4 py-3 leading-normal text-blue-700 bg-blue-100 rounded mb-5 text-center"
-
 const ContainerImage = styled.div`
   width: auto;
   height: 500px;
-  margin: 165px 0 0 0;
+  margin: 135px 0 0 0;
   text-align: center;
 `;
 
@@ -418,4 +412,9 @@ const SocialMedia = styled.div`
   margin: 50px auto 100px auto;
   align-items: center;
   justify-content: space-evenly;
+`;
+
+const SocialMediaLink = styled.a`
+  color: #99d3d1;
+  text-decoration: none;
 `;

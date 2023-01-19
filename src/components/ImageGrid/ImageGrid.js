@@ -13,7 +13,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1605101943206-05c8f4e64598?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674135682/Feedback/Screenshot_2023-01-19_at_14.41.01_cb19c9.png"
                 alt=""
                 onClick={() => navigate("/category/2")}
               />
@@ -25,7 +25,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1628336707631-68131ca720c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmFjaGVsb3JldHRlJTIwcGFydHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134824/Feedback/image_6483441_bprnun.jpg"
                 alt=""
                 onClick={() => navigate("/category/3")}
               />
@@ -37,7 +37,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134825/Feedback/image_6483441_1_fbjlz1.jpg"
                 alt=""
                 onClick={() => navigate("/category/1")}
               />
@@ -50,7 +50,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1598901801652-6762bb611581?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Vm93JTIwcmVuZXdhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134825/Feedback/image_6487327_ucdvcc.jpg"
                 alt=""
                 onClick={() => navigate("/category/4")}
               />
@@ -63,7 +63,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1566516171511-1c411a59c8ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134825/Feedback/image_6483441_2_fj96te.jpg"
                 alt=""
                 onClick={() => navigate("/category/5")}
               />
@@ -75,7 +75,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Z2VuZGVyJTIwcmV2ZWxhdGlvbiUyMHBhcnR5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134824/Feedback/image_6487327_1_yowxgw.jpg"
                 alt=""
                 onClick={() => navigate("/category/7")}
               />
@@ -88,7 +88,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1594300907312-c6603f83b2c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8QmFieSUyMHNob3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134824/Feedback/image_6483441_3_kvda72.jpg"
                 alt=""
                 onClick={() => navigate("/category/6")}
               />
@@ -101,7 +101,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/flagged/photo-1571275460369-dc7c65c85082?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJpcnRoZGF5JTIwcGFydHklMjBjaGlsZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134824/Feedback/image_6483441_4_ojuuio.jpg"
                 alt=""
                 onClick={() => navigate("/category/8")}
               />
@@ -113,7 +113,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://images.unsplash.com/photo-1544155892-b2b6c64204fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJpcnRoZGF5JTIwcGFydHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674134825/Feedback/image_50462465_to3avx.jpg"
                 alt=""
                 onClick={() => navigate("/category/9")}
               />

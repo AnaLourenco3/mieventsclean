@@ -1,21 +1,21 @@
 import styled from "styled-components";
-import PhotoGalleryDetails from "../../../components/GalleryImages/PhotoGalleryDetails";
-// import { dataWeddings } from "./dataweddings";
+import PhotoGalleryDetails from "../../components/GalleryImages/PhotoGalleryDetails";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchBlogDataById } from "../../../store/blogs/thunks";
+import { fetchBlogDataById } from "../../store/blogs/thunks";
 import { useParams } from "react-router-dom";
+import { selectBlog } from "../../store/blogs/selectors";
 
-import { selectBlog } from "../../../store/blogs/selectors";
-import { selectBlogsData } from "../../../store/categories/selectors";
-import { fetchBlogDataPerCategory } from "../../../store/categories/thunks";
-
-function WeddingsDetails() {
+function CategoryBlogDetails() {
   const dispatch = useDispatch();
   const { id } = useParams();
 
   const blogData = useSelector(selectBlog);
   console.log("from details lalala", blogData);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     dispatch(fetchBlogDataById(id));
@@ -50,7 +50,7 @@ function WeddingsDetails() {
   );
 }
 
-export default WeddingsDetails;
+export default CategoryBlogDetails;
 
 const ContainerBody = styled.div`
   width: 60%;

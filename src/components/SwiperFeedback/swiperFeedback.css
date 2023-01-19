@@ -50,15 +50,17 @@ body {
 
 .imageSlider {
   display: block;
- width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 400px;
   border-radius: 10px ;
-
+  margin: 0 3em;
+  transition: 500ms;
 
 }
 
 .imageSlider:hover {
   transform: scale(1.3);
+  
 }
 
 

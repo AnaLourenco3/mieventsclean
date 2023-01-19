@@ -4,6 +4,7 @@ import miLogo from "./miLogo.png";
 import { NavLink as Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
+const scrollToTop = () => window.scrollTo(0, 0);
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,12 +37,24 @@ const Navbar = () => {
             Parties&Events <RiArrowDropDownLine />
           </NavLink>
           <NavbarDropdownContent>
-            <NavLink to="/category/8">Child Birthday</NavLink>{" "}
-            <NavLink to="/category/9">Adult Birthday</NavLink>
-            <NavLink to="/category/5">Baptism</NavLink>
-            <NavLink to="/category/6">Baby Shower</NavLink>
-            <NavLink to="/category/7">Gender Reveal</NavLink>
-            <NavLink to="/category/10">Other Events</NavLink>
+            <NavLink to="/category/8" onClick={scrollToTop}>
+              Child Birthday
+            </NavLink>
+            <NavLink to="/category/9" onClick={scrollToTop}>
+              Adult Birthday
+            </NavLink>
+            <NavLink to="/category/5" onClick={scrollToTop}>
+              Baptism
+            </NavLink>
+            <NavLink to="/category/6" onClick={scrollToTop}>
+              Baby Shower
+            </NavLink>
+            <NavLink to="/category/7" onClick={scrollToTop}>
+              Gender Reveal
+            </NavLink>
+            <NavLink to="/category/10" onClick={scrollToTop}>
+              Other Events
+            </NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavLink to="/diy/11">Diy</NavLink>
@@ -74,18 +87,18 @@ const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  height: 100px;
   flex-wrap: wrap;
   background: rgb(250, 250, 250, 0.8);
   position: fixed;
-  top: 45px;
+  top: 35px;
   left: 0;
   right: 0;
   z-index: 7;
 `;
 
 const Logo = styled.a`
-  padding: 2rem 0;
+  padding: 1rem 0;
 `;
 
 const Menu = styled.div`

@@ -1,82 +1,6 @@
 import styled from "styled-components";
 import image from "../../components/images/Miriam.jpg";
 
-const ContainerBody = styled.div`
-  max-width: 900px;
-  height: auto;
-  margin: 180px auto 150px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  flex-wrap: wrap;
-  flex-direction: row;
-
-  grid-gap: 60px;
-
-  @media (max-width: 990px) {
-    max-width: 720px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 540px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 500px) {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 400px) {
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const ContainerImage = styled.div`
-  width: auto;
-  height: 500px;
-  margin: 165px 0 0 0;
-  text-align: center;
-`;
-
-const TitleEvent = styled.p`
-  font-family: Amsterdam;
-  font-size: 4rem;
-  text-shadow: 2px 1px 4px black;
-  position: absolute;
-  top: 50%;
-  left: 52%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  margin: auto;
-  color: white;
-  z-index: 4;
-  transition: 0.6s ease-in-out;
-  word-spacing: 30px;
-  @media (max-width: 768px) {
-    font-size: 3rem;
-  }
-`;
-
-const ContainerText = styled.div``;
-const ContainerAboutImage = styled.div``;
-
-const Text = styled.div`
-  font-family: Poppins;
-`;
-const Column = styled.div``;
-
-const Signature = styled.p`
-  font-family: Amsterdam;
-  font-size: 1.5rem;
-  text-align: right;
-`;
-
 function About() {
   return (
     <div>
@@ -131,3 +55,78 @@ function About() {
 }
 
 export default About;
+
+const ContainerBody = styled.div`
+  max-width: 900px;
+  height: auto;
+  margin: 180px auto 150px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  grid-gap: 60px;
+
+  @media (max-width: 990px) {
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const ContainerImage = styled.div`
+  width: auto;
+  height: 500px;
+  margin: 135px 0 0 0;
+  text-align: center;
+`;
+
+const TitleEvent = styled.p`
+  font-family: Amsterdam;
+  font-size: 4rem;
+  text-shadow: 2px 1px 4px black;
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: auto;
+  color: white;
+  z-index: 4;
+  transition: 0.6s ease-in-out;
+  word-spacing: 30px;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+`;
+
+const ContainerText = styled.div``;
+const ContainerAboutImage = styled.div``;
+
+const Text = styled.div`
+  font-family: Poppins;
+`;
+
+const Signature = styled.p`
+  font-family: Amsterdam;
+  font-size: 1.5rem;
+  text-align: right;
+`;

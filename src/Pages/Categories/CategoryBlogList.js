@@ -1,16 +1,14 @@
-// import { dataWeddings } from "./dataweddings";
-
 import styled from "styled-components";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   selectBlogsData,
   selectCategoryData,
-} from "../../../store/categories/selectors";
-import { fetchBlogDataPerCategory } from "../../../store/categories/thunks";
+} from "../../store/categories/selectors";
+import { fetchBlogDataPerCategory } from "../../store/categories/thunks";
 
-function Weddings() {
+function CategoryBlogList() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
@@ -21,6 +19,10 @@ function Weddings() {
   console.log("from data category", categoryData);
 
   // console.log("from data blogs", blogsData);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     if (id > 10) {
@@ -74,12 +76,12 @@ function Weddings() {
   );
 }
 
-export default Weddings;
+export default CategoryBlogList;
 
 const ContainerImage = styled.div`
   width: auto;
   height: 500px;
-  margin: 165px 0 0 0;
+  margin: 135px 0 0 0;
   text-align: center;
 `;
 
