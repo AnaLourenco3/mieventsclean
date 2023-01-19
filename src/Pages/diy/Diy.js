@@ -96,6 +96,7 @@ const TitleEvent = styled.h1`
   color: white;
   z-index: 4;
   transition: 0.6s ease-in-out;
+  letter-spacing: 25px;
   @media (max-width: 768px) {
     font-size: 3rem;
   }
