@@ -27,10 +27,11 @@ function HomePage() {
       <ImageGrid />
 
       <ContactUsHomepage />
-      <Instagram />
+
       <ContainerFeedbackSlider>
         <SwiperFeedback props={feedbacks} />
       </ContainerFeedbackSlider>
+      <Instagram />
     </div>
   );
 }
