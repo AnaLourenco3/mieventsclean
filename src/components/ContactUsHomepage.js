@@ -17,7 +17,7 @@ export default ContactUsHomepage;
 
 const Container = styled.div`
   width: 100%;
-  margin: 180px auto 180px auto;
+  margin: 180px auto 80px auto;
   background-color: rgb(226, 183, 185, 0.8);
   height: 200px;
   padding: 30px 0px;
