@@ -13,7 +13,7 @@ function ImageGrid() {
           <div className="gallery-item">
             <div className="image">
               <img
-                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674135682/Feedback/Screenshot_2023-01-19_at_14.41.01_cb19c9.png"
+                src="https://res.cloudinary.com/dbfcdt6sp/image/upload/v1674139067/IMG_7577_idmjso.jpg"
                 alt=""
                 onClick={() => navigate("/category/2")}
               />
