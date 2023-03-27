@@ -197,7 +197,7 @@ const Footer = () => {
           </Column>
         </Row>
       </Container>
-      <Copyright>© 2022 developed by Ana Lourenço </Copyright>
+      <Copyright>© 2023 developed by Ana Lourenço </Copyright>
     </Box>
   );
 };
