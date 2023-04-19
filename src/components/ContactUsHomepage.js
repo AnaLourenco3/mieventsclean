@@ -6,9 +6,9 @@ function ContactUsHomepage() {
 
   return (
     <Container>
-      <Text>Lets Celebrate!</Text>
+      <Text>Vamos Celebrar!</Text>
 
-      <Button onClick={() => navigate("/contact")}>Contact Us</Button>
+      <Button onClick={() => navigate("/contact")}>Contacto</Button>
     </Container>
   );
 }

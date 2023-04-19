@@ -16,9 +16,6 @@ function CategoryBlogList() {
   const blogsData = useSelector(selectBlogsData);
 
   const categoryData = useSelector(selectCategoryData);
-  console.log("from data category", categoryData);
-
-  // console.log("from data blogs", blogsData);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,16 +55,12 @@ function CategoryBlogList() {
           blogsData.map((item, index) => (
             <ContainerBlog key={index}>
               <ContainerImageBlog>
-                <ImageBlog
-                  // style={{ width: "100%", height: "100%" }}
-                  src={item.mainImageUrl}
-                  alt="img wedding"
-                />
+                <ImageBlog src={item.mainImageUrl} alt="img wedding" />
               </ContainerImageBlog>
               <ContainerDescriptionBlog>
                 <p>{item.date}</p>
-                <h3 style={{ fontSize: "1.5rem" }}>{item.title}</h3>
-                <LinkDetails to={`/blog/${item.id}`}>See more</LinkDetails>
+                <EventName>{item.title}</EventName>
+                <LinkDetails to={`/blog/${item.id}`}>Ver mais</LinkDetails>
               </ContainerDescriptionBlog>
             </ContainerBlog>
           ))}
@@ -90,7 +83,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -98,7 +91,7 @@ const TitleEvent = styled.p`
   color: white;
   z-index: 4;
   transition: 0.6s ease-in-out;
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     font-size: 3rem;
   }
 `;
@@ -106,11 +99,9 @@ const TitleEvent = styled.p`
 const ContainerBody = styled.div`
   width: 85%;
   min-height: 800px;
-  max-height: none;
   margin: 0 auto 100px auto;
   @media (max-width: 768px) {
     width: 95%;
-    max-height: none;
     margin: 70px auto 110px auto;
   } ;
 `;
@@ -118,14 +109,14 @@ const ContainerBody = styled.div`
 const ContainerQuote = styled.div`
   text-align: center;
 
-  margin: 50px auto 50px auto;
+  margin: 100px auto 50px auto;
   font-family: "Dancing Script";
   font-size: 2rem;
   vertical-align: center;
 `;
 
 const ContainerText = styled.div`
-  margin: 50px auto 110px auto;
+  margin: 50px auto 100px auto;
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   vertical-align: center;
@@ -133,28 +124,22 @@ const ContainerText = styled.div`
 
   @media (max-width: 768px) {
     width: 90%;
-    max-height: none;
-    margin: 50px auto 50px auto;
-    line-height: 20px;
-    text-align: center;
+    margin: 50px auto 80px auto;
   } ;
 `;
 
 const ContainerBlog = styled.div`
   max-width: 900px;
-  height: auto;
-  margin: 80px auto auto auto;
-  font-family: "Poppins", sans-serif;
+
+  margin: 150px auto 150px auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
   text-align: left;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     max-width: 100%;
-
-    max-height: none;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 100px auto;
     line-height: 7px;
     text-align: center;
     display: flex;
@@ -165,8 +150,6 @@ const ContainerBlog = styled.div`
 `;
 
 const ContainerImageBlog = styled.div`
-  margin-left: 50px;
-
   @media (max-width: 768px) {
     margin-left: 0;
     text-align: center;
@@ -188,6 +171,15 @@ const ContainerDescriptionBlog = styled.div`
 
   @media (max-width: 768px) {
     padding-top: 0;
+  } ;
+`;
+
+const EventName = styled.p`
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
   } ;
 `;
 

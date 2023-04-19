@@ -11,7 +11,6 @@ function CategoryBlogDetails() {
   const { id } = useParams();
 
   const blogData = useSelector(selectBlog);
-  console.log("from details lalala", blogData);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,7 +29,7 @@ function CategoryBlogDetails() {
         <div>
           <p>{blogData.date}</p>
           <h2>{blogData.title}</h2>
-          <p style={{ textAlign: "left" }}>{blogData.text}</p>{" "}
+          <p style={{ marginTop: "50px" }}>{blogData.text}</p>{" "}
         </div>
       </ContainerBlogDetails>
 
@@ -54,9 +53,9 @@ export default CategoryBlogDetails;
 
 const ContainerBody = styled.div`
   width: 60%;
-  min-height: 800px;
-  max-height: none;
+  min-height: 600px;
   margin: 250px auto 110px auto;
+  font-size: 1rem;
   line-height: 30px;
   text-align: center;
   font-family: "Poppins";
@@ -64,20 +63,11 @@ const ContainerBody = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     min-height: 500px;
-    max-height: none;
     margin: 200px auto 110px auto;
-    line-height: 15px;
-    text-align: center;
   } ;
 `;
 const ContainerBlogDetails = styled.div`
-  font-size: 1rem;
   margin-bottom: 70px;
-
-  @media (max-width: 768px) {
-    font-size: 0.8rem;
-    margin-bottom: 40px;
-  } ;
 `;
 
 const VideoFrame = styled.iframe`

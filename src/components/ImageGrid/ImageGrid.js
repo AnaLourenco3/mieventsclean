@@ -7,7 +7,7 @@ function ImageGrid() {
 
   return (
     <div>
-      <h1 className="title">Services & Photo Gallery</h1>
+      <h1 className="title">Serviços & Galeria</h1>
       <div className="container">
         <div className="gallery-container">
           <div className="gallery-item">
@@ -18,7 +18,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/2")}
               />
             </div>
-            <div className="text">Wedding Proposal</div>
+            <div className="text">Pedidos de Casamento</div>
           </div>
         </div>
         <div className="gallery-container">
@@ -30,7 +30,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/3")}
               />
             </div>
-            <div className="text">Bachelorette Party</div>
+            <div className="text">Despedidas de Solteira</div>
           </div>
         </div>
         <div className="gallery-container">
@@ -42,7 +42,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/1")}
               />
             </div>
-            <div className="text">Wedding</div>
+            <div className="text">Casamentos</div>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/4")}
               />
             </div>
-            <div className="text">Vow Renewal</div>
+            <div className="text">Renovação de Votos/Bodas</div>
           </div>
         </div>
 
@@ -68,7 +68,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/5")}
               />
             </div>
-            <div className="text">Baptism</div>
+            <div className="text">Batizados</div>
           </div>
         </div>
         <div className="gallery-container">
@@ -80,7 +80,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/7")}
               />
             </div>
-            <div className="text">Gender Reveal Party</div>
+            <div className="text">Chás de Revelação</div>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/6")}
               />
             </div>
-            <div className="text">Baby Shower</div>
+            <div className="text">Baby Showers</div>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/8")}
               />
             </div>
-            <div className="text">Birthday Party Children</div>
+            <div className="text">Aniversários Infantis</div>
           </div>
         </div>
         <div className="gallery-container">
@@ -118,7 +118,7 @@ function ImageGrid() {
                 onClick={() => navigate("/category/9")}
               />
             </div>
-            <div className="text">Birthday Party Adult</div>
+            <div className="text">Aniversários Adultos</div>
           </div>
         </div>
       </div>

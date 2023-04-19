@@ -4,30 +4,35 @@ import { BsInstagram } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
+const email = "madebymieventos@gmail.com";
+const mobile = "964345526";
+
 function Header() {
   return (
     <Container>
       <Details>
-        <MdEmail style={{ paddingRight: "5px" }} />
-        <p style={{ paddingRight: "10px" }}> madebymieventos@gmail.com </p>{" "}
-        <BsFillTelephoneFill style={{ paddingRight: "5px" }} />
-        <p>964345526</p>
+        <ClickableLink href={`mailto:${email}`}>
+          <MdEmail style={{ paddingRight: "5px" }} />
+          <p style={{ paddingRight: "20px" }}> {email} </p>{" "}
+        </ClickableLink>
+        <ClickableLink href={`tel:${mobile}`}>
+          <BsFillTelephoneFill style={{ paddingRight: "5px" }} />
+          <p>964345526</p>
+        </ClickableLink>
       </Details>
       <SocialMedia>
-        <HeaderLink href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y=">
+        {/* <HeaderLink href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y=">
           <BsInstagram style={{ paddingRight: "10px" }} />{" "}
-        </HeaderLink>
+        </HeaderLink> */}
         <HeaderLink href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y=">
           <BsInstagram style={{ paddingRight: "10px" }} />
         </HeaderLink>
-        <HeaderLink href="https://www.facebook.com/profile.php?id=1000884">
+        {/* {/* <HeaderLink href="https://www.facebook.com/profile.php?id=1000884">
           <BsFacebook style={{ paddingRight: "10px" }} />
-        </HeaderLink>
+        </HeaderLink> */}
         <HeaderLink href="https://www.pinterest.pt/madebymievents/_saved/">
           <BsPinterest style={{ paddingRight: "10px" }} />
-        </HeaderLink>
-        {/* <div style={{ paddingRight: "10px" }}>🇬🇧 </div>
-        <div> 🇵🇹</div> */}
+        </HeaderLink>{" "}
       </SocialMedia>
     </Container>
   );
@@ -63,10 +68,10 @@ const Details = styled.div`
   align-items: center;
   font-size: 14px;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   @media (max-width: 768px) {
     display: flex;
-    font-size: xx-small;
+    font-size: small;
   }
 `;
 
@@ -79,7 +84,7 @@ const SocialMedia = styled.div`
   padding-top: 5px;
   @media (max-width: 768px) {
     display: flex;
-    font-size: x-small;
+    font-size: small;
     padding-left: 20px;
   }
 `;
@@ -87,4 +92,12 @@ const SocialMedia = styled.div`
 const HeaderLink = styled.a`
   color: white;
   text-decoration: none;
+`;
+
+const ClickableLink = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
 `;

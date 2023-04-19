@@ -7,6 +7,74 @@ import { BsPinterest } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 
+const Footer = () => {
+  return (
+    <Box>
+      <Container>
+        <Row>
+          <Column>
+            <Heading>Made By Mi</Heading>
+            <FootingParagraph>
+              <MdEmail style={{ marginRight: "5px" }} />
+              madebymieventos@gmail.com
+            </FootingParagraph>
+            <FootingParagraph>
+              <BsFillTelephoneFill style={{ marginRight: "5px" }} /> +351
+              964345526
+            </FootingParagraph>
+            <FootingParagraph>
+              <ImLocation style={{ marginRight: "5px" }} /> Lisboa e Vale do
+              Tejo
+            </FootingParagraph>
+
+            <FooterLink to="/about" style={{ marginTop: "20px" }}>
+              About
+            </FooterLink>
+            <FooterLink to="/contact">Contact </FooterLink>
+          </Column>
+          <Column>
+            <Heading>Casamentos</Heading>
+            <FooterLink to="/category/1">Casamentos</FooterLink>
+            <FooterLink to="/category/2">Pedidos de Casamento</FooterLink>
+            <FooterLink to="/category/3">Despedidas de Solteira</FooterLink>
+            <FooterLink to="/category/4">Renovação de Votos/Bodas</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Festas&Eventos</Heading>
+            <FooterLink to="/category/5">Batizados</FooterLink>
+            <FooterLink to="/category/6">Baby Showers</FooterLink>
+            <FooterLink to="/category/7">Chás de Revelação</FooterLink>
+            <FooterLink to="/category/8">Aniversários Infantis</FooterLink>
+            <FooterLink to="/category/9">Aniversários Adultos</FooterLink>
+            <FooterLink to="/category/10">Outros Eventos</FooterLink>
+          </Column>
+          <Column>
+            <Heading>Redes Sociais</Heading>
+
+            <FooterLinkSocialMedia href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y=">
+              <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Weddings
+            </FooterLinkSocialMedia>
+            <FooterLinkSocialMedia href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y=">
+              <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Events
+            </FooterLinkSocialMedia>
+            {/* <FooterLinkSocialMedia
+              href="https://www.facebook.com/profile.php?id=100088437476729"
+              style={{ marginLeft: "10px" }}
+            >
+              <BsFacebook />
+            </FooterLinkSocialMedia> */}
+            <FooterLinkSocialMedia href="#">
+              <BsPinterest />
+            </FooterLinkSocialMedia>
+          </Column>
+        </Row>
+      </Container>
+      <Copyright>© 2023 Made by Mi </Copyright>
+    </Box>
+  );
+};
+export default Footer;
+
 const Box = styled.div`
   padding: 80px 60px;
   background: #99d3d1;
@@ -39,7 +107,7 @@ const Column = styled.div`
 
 const Row = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto auto; /*repeat(auto-fill, minmax(185px, 1fr));*/
+  grid-template-columns: auto auto auto auto;
   grid-gap: 50px;
 
   @media (max-width: 1000px) {
@@ -62,9 +130,8 @@ const FooterLink = styled(Link)`
   }
 
   @media (max-width: 768px) {
+    font-size: 14px;
     display: flex;
-    font-size: 0.6rem;
-    line-height: 3px;
   }
 `;
 
@@ -75,16 +142,17 @@ const FooterLinkSocialMedia = styled.a`
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   line-height: 17px;
+  display: flex;
+  align-items: center;
 
   &:hover {
     text-decoration: underline;
     transition: 200ms ease-in;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     display: flex;
-    font-size: 0.6rem;
-    line-height: 3px;
+    font-size: 14px;
   }
 `;
 
@@ -95,11 +163,11 @@ const FootingParagraph = styled.div`
   font-size: 16px;
   line-height: 10px;
   align-items: center;
+  display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     display: flex;
-    font-size: 0.8rem;
-    line-height: 3px;
+    font-size: 14px;
   }
 `;
 
@@ -110,7 +178,7 @@ const Heading = styled.p`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     display: flex;
     font-size: 1rem;
   }
@@ -120,85 +188,5 @@ const Copyright = styled.div`
   color: white;
   text-align: center;
   margin-top: 60px;
-
-  font-family: "Poppins", sans-serif;
   font-size: 14px;
-  @media (max-width: 768px) {
-    font-size: x-small;
-    margin: auto;
-  }
 `;
-
-const Footer = () => {
-  return (
-    <Box>
-      <Container>
-        <Row>
-          <Column>
-            <Heading>Made By Mi</Heading>
-            <FootingParagraph>
-              <MdEmail style={{ marginRight: "5px" }} />
-              madebymieventos@gmail.com
-            </FootingParagraph>
-            <FootingParagraph>
-              <BsFillTelephoneFill style={{ marginRight: "5px" }} /> +351
-              964345526
-            </FootingParagraph>
-            <FootingParagraph>
-              <ImLocation style={{ marginRight: "5px" }} /> Lisboa e Vale do
-              Tejo
-            </FootingParagraph>
-
-            <FooterLink to="/about" style={{ marginTop: "20px" }}>
-              About
-            </FooterLink>
-            <FooterLink to="/contact">Contact </FooterLink>
-          </Column>
-          <Column>
-            <Heading>Weddings</Heading>
-            <FooterLink to="/category/1">Wedding</FooterLink>
-            <FooterLink to="/category/2">Wedding Proposal</FooterLink>
-            <FooterLink to="/category/3">Bachelorette Party</FooterLink>
-            <FooterLink to="/category/4">Vow Renewal</FooterLink>
-          </Column>
-          <Column>
-            <Heading>Parties&Events</Heading>
-            <FooterLink to="/category/5">Baptism</FooterLink>
-            <FooterLink to="/category/6">Baby Shower</FooterLink>
-            <FooterLink to="/category/7">Gender Reveal</FooterLink>
-            <FooterLink to="/category/8">Children Birthday Party</FooterLink>
-            <FooterLink to="/category/9">Adult Birthday Party</FooterLink>
-            <FooterLink to="/category/10">Other Events</FooterLink>
-          </Column>
-          <Column>
-            <Heading>Social Media</Heading>
-
-            <FooterLinkSocialMedia
-              href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y="
-              style={{ marginLeft: "10px" }}
-            >
-              <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Weddings
-            </FooterLinkSocialMedia>
-            <FooterLinkSocialMedia
-              href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y="
-              style={{ marginLeft: "10px" }}
-            >
-              <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Events
-            </FooterLinkSocialMedia>
-            <FooterLinkSocialMedia
-              href="https://www.facebook.com/profile.php?id=100088437476729"
-              style={{ marginLeft: "10px" }}
-            >
-              <BsFacebook />
-            </FooterLinkSocialMedia>
-            <FooterLinkSocialMedia href="#" style={{ marginLeft: "10px" }}>
-              <BsPinterest />
-            </FooterLinkSocialMedia>
-          </Column>
-        </Row>
-      </Container>
-      <Copyright>© 2023 developed by Ana Lourenço </Copyright>
-    </Box>
-  );
-};
-export default Footer;

@@ -23,23 +23,23 @@ export default function SwiperPanorama() {
             alt="img wedding"
           />
           <div>
-            <div className="imgTitle">Weddings</div>
+            <div className="imgTitle">Casamentos</div>
             <div className="services">
-              <p>Wedding Proposals</p>
-              <p>Bachelorette Parties</p>
-              <p>Weddings</p>
-              <p>Vow Renewals</p>
+              <p>Pedidos de Casamento</p>
+              <p>Despedidas de Solteira</p>
+              <p>Casamentos</p>
+              <p>Renovação de Votos/Bodas</p>
             </div>
           </div>
           <div>
-            <div className="imgTitle1">Events</div>
+            <div className="imgTitle1">Eventos</div>
             <div className="services1">
-              <p>Baptisms</p>
+              <p>Batizados</p>
               <p>Baby Showers</p>
-              <p>Gender Revelation</p>
-              <p>Birthday Parties for Children</p>
-              <p>Birthday Parties for Adults</p>
-              <p>Other Events</p>
+              <p>Chá de Revelação</p>
+              <p>Aniversários Infantis</p>
+              <p>Aniversários Adultos</p>
+              <p>Outros Eventos</p>
             </div>
           </div>
         </SwiperSlide>
@@ -50,23 +50,23 @@ export default function SwiperPanorama() {
             alt="img wedding"
           />
           <div>
-            <div className="imgTitle">Weddings</div>
+            <div className="imgTitle">Casamentos</div>
             <div className="services">
-              <p>Wedding Proposals</p>
-              <p>Bachelorette Parties</p>
-              <p>Weddings</p>
-              <p>Vow Renewals</p>
+              <p>Pedidos de Casamento</p>
+              <p>Despedidas de Solteira</p>
+              <p>Casamentos</p>
+              <p>Renovação de Votos/Bodas</p>
             </div>
           </div>
           <div>
-            <div className="imgTitle1">Events</div>
+            <div className="imgTitle1">Eventos</div>
             <div className="services1">
-              <p>Baptisms</p>
+              <p>Batizados</p>
               <p>Baby Showers</p>
-              <p>Gender Revelation</p>
-              <p>Birthday Parties for Children</p>
-              <p>Birthday Parties for Adults</p>
-              <p>Other Events</p>
+              <p>Chá de Revelação</p>
+              <p>Aniversários Infantis</p>
+              <p>Aniversários Adultos</p>
+              <p>Outros Eventos</p>
             </div>
           </div>
         </SwiperSlide>

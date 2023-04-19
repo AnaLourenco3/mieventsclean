@@ -1,66 +1,89 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import miLogo from "./miLogo.png";
 import { NavLink as Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import BurgerButton from "./BurgerButton";
 
 const scrollToTop = () => window.scrollTo(0, 0);
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
+  const [dropdownVisible, setDropdownVisible] = useState({
+    1: false,
+    2: false,
+  });
+
+  const handleDropdownToggle = (id) => {
+    setDropdownVisible((prevState) => {
+      return { ...prevState, [id]: !prevState[id] };
+    });
+  };
+
+  const handleDropdownClose = (id) => {
+    setDropdownVisible((prevState) => {
+      return { ...prevState, [id]: false };
+    });
+  };
 
   return (
     <Nav>
       <Logo href="/">
         <img src={miLogo} height="70px" alt="logo" />
       </Logo>
-      <Hamburger onClick={() => setIsOpen(!isOpen)}>
-        <span />
-        <span />
-        <span />
-      </Hamburger>
-      <Menu isOpen={isOpen}>
+      <BurgerButton clicked={clicked} handleClick={handleClick} />
+      <Menu clicked={clicked}>
         <NavLink to="/">Home</NavLink>
-        <NavbarDropdown>
+        <NavbarDropdown
+          onClick={() => handleDropdownToggle(1)}
+          onBlur={() => handleDropdownClose(1)}
+        >
           <NavLink style={{ textDecoration: "none" }}>
-            Weddings <RiArrowDropDownLine />
+            Casamentos <RiArrowDropDownLine />
           </NavLink>
           {/* <Link to={`/blogs/${b.id}`}>See more</Link> */}
           <NavbarDropdownContent>
-            <NavLink to="/category/2">Wedding Proposal</NavLink>{" "}
-            <NavLink to="/category/3">Bachelorette Party</NavLink>
-            <NavLink to="/category/1">Wedding</NavLink>
-            <NavLink to="/category/4">Vow Renewal</NavLink>
+            <NavLink to="/category/2">Pedidos de Casamento</NavLink>{" "}
+            <NavLink to="/category/3">Despedidas de Solteira</NavLink>
+            <NavLink to="/category/1">Casamentos</NavLink>
+            <NavLink to="/category/4">Renovação de Votos/Bodas</NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
-        <NavbarDropdown>
+        <NavbarDropdown
+          onClick={() => handleDropdownToggle(2)}
+          onBlur={() => handleDropdownClose(2)}
+        >
           <NavLink style={{ textDecoration: "none" }}>
-            Parties&Events <RiArrowDropDownLine />
+            Festas&Eventos <RiArrowDropDownLine />
           </NavLink>
           <NavbarDropdownContent>
             <NavLink to="/category/8" onClick={scrollToTop}>
-              Child Birthday
+              Aniversários Infantis
             </NavLink>
             <NavLink to="/category/9" onClick={scrollToTop}>
-              Adult Birthday
+              Aniversários Adultos
             </NavLink>
             <NavLink to="/category/5" onClick={scrollToTop}>
-              Baptism
+              Batizados
             </NavLink>
             <NavLink to="/category/6" onClick={scrollToTop}>
-              Baby Shower
+              Baby Showers
             </NavLink>
             <NavLink to="/category/7" onClick={scrollToTop}>
-              Gender Reveal
+              Chás de Revelação
             </NavLink>
             <NavLink to="/category/10" onClick={scrollToTop}>
-              Other Events
+              Outros Eventos
             </NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavLink to="/diy/11">DIY</NavLink>
         {/* <NavLink to="/blog">Blog</NavLink> */}
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/about">Sobre</NavLink>
+        <NavLink to="/contact">Contacto</NavLink>
       </Menu>
     </Nav>
   );
@@ -89,7 +112,7 @@ const Nav = styled.div`
   align-items: center;
   height: 100px;
   flex-wrap: wrap;
-  background: rgb(250, 250, 250, 0.8);
+  background: rgb(250, 250, 250, 0.9);
   position: fixed;
   top: 35px;
   left: 0;
@@ -104,31 +127,18 @@ const Logo = styled.a`
 const Menu = styled.div`
   display: flex;
   justify-content: space-between;
+
   align-items: center;
   position: relative;
   @media (max-width: 1060px) {
     overflow: hidden;
     background-color: rgb(255, 255, 255, 0.9);
+
     flex-direction: column;
-    max-height: ${({ isOpen }) => (isOpen ? "auto" : "0")};
+    padding: ${({ clicked }) => (clicked ? "20px 0" : "0")};
+    max-height: ${({ clicked }) => (clicked ? "auto" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
-  }
-`;
-
-const Hamburger = styled.div`
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  span {
-    height: 2px;
-    width: 25px;
-    background: #abdbd9;
-    margin-bottom: 4px;
-    border-radius: 5px;
-  }
-  @media (max-width: 1050px) {
-    display: flex;
   }
 `;
 
@@ -143,7 +153,7 @@ const NavbarDropdown = styled.div`
   &:hover {
     display: block;
 
-    > div {
+    div {
       display: flex;
       flex-direction: column;
       margin-top: 10px;
@@ -151,27 +161,32 @@ const NavbarDropdown = styled.div`
     }
   }
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1060px) {
     display: flex;
 
     &:hover {
+      position: relative;
       display: block;
 
-      > div {
+      div {
         display: flex;
         flex-direction: column;
         margin-top: 10px;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(171, 219, 217, 0.3);
       }
     }
   }
 `;
 
 const NavbarDropdownContent = styled.div`
-  display: none;
+  display: ${({ visible }) => (visible ? "flex" : "none")};
   position: absolute;
-  /* background-color: #f9f9f9; */
+  flex-direction: column;
+
   min-width: 240px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
   z-index: 1;
+  @media (max-width: 1060px) {
+    position: static;
+  }
 `;

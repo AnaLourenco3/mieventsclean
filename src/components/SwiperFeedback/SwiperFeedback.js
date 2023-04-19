@@ -10,7 +10,7 @@ import { EffectCoverflow, Pagination, Autoplay, Zoom } from "swiper";
 export default function SwiperFeedback({ props }) {
   return (
     <>
-      <h1 className="heading">What our clients say:</h1>
+      <h1 className="heading">Feedback dos clientes:</h1>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -23,10 +23,6 @@ export default function SwiperFeedback({ props }) {
           depth: 300,
           modifier: 1,
           slideShadows: false,
-        }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: true,
         }}
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination, Autoplay, Zoom]}
