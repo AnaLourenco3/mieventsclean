@@ -7,6 +7,7 @@ import { BsPinterest } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
+import map from "../../components/images/map.png";
 
 function Contact() {
   const [values, setValues] = useState({
@@ -65,7 +66,7 @@ function Contact() {
           src="https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80"
           alt="img wedding"
         />
-        <TitleEvent>Contact Me</TitleEvent>
+        <TitleEvent>Contacto</TitleEvent>
       </ContainerImage>
       <Contacts>
         <Container>
@@ -84,7 +85,7 @@ function Contact() {
                   />
                 </Icon>
                 <Text>
-                  <P>Adress:</P>
+                  <P>Morada:</P>
                   <p>Lisboa e Vale do Tejo</p>
                 </Text>
               </ContactWidgetItem>
@@ -101,7 +102,7 @@ function Contact() {
                   />
                 </Icon>
                 <Text>
-                  <P>Telephone:</P>
+                  <P>Telefone:</P>
                   <p>+351 964345526 </p>
                 </Text>
               </ContactWidgetItem>
@@ -118,7 +119,7 @@ function Contact() {
                   />
                 </Icon>
                 <Text>
-                  <P>Mail:</P>
+                  <P>Email:</P>
                   <p>madebymieventos@gmail.com</p>
                 </Text>
               </ContactWidgetItem>
@@ -127,14 +128,15 @@ function Contact() {
             <ContactForm>
               <Form onSubmit={handleSubmit}>
                 <Text style={{ marginBottom: "15px" }}>
-                  Dear client, feel free to contact me for any questions. If you
-                  want a cost estimation, please specify the type of service and
-                  number of guests. I will contact you back as soon as possible.
+                  Estimado cliente, sinta-se à vontade para me contactar para
+                  qualquer dúvida. Se desejar um orçamento, por favor
+                  especifique o tipo de serviço e número de convidados. Entrarei
+                  em contato consigo o mais breve possível.
                 </Text>
                 <Input
                   type="text"
                   id=""
-                  placeholder="Name  "
+                  placeholder="Nome  "
                   name="name"
                   value={values.name}
                   onChange={handleChange}
@@ -151,14 +153,14 @@ function Contact() {
                 <Input
                   type="text"
                   id=""
-                  placeholder="Telephone (optional) "
+                  placeholder="Telefone (opcional) "
                   value={values.phone}
                   onChange={handleChange}
                   required
                   name="phone"
                 />
                 <Textarea
-                  placeholder="Write to me here"
+                  placeholder="Mensagem"
                   value={values.message}
                   onChange={handleChange}
                   name="message"
@@ -182,11 +184,13 @@ function Contact() {
         <SocialMediaLink href="https://www.facebook.com/profile.php?id=100088437476729">
           <BsFacebook style={{ fontSize: "2rem" }} />{" "}
         </SocialMediaLink>
-        <BsPinterest style={{ fontSize: "2rem" }} />
+        <SocialMediaLink href="https://www.pinterest.com/">
+          <BsPinterest style={{ fontSize: "2rem" }} />
+        </SocialMediaLink>
       </SocialMedia>
       <MapColumn>
-        <ContactMap>
-          <Iframe
+        <Map src={map} alt="map" />
+        {/* <Iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199168.24109346297!2d-9.30079440323782!3d38.74067577922809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa%2C%20Portugal!5e0!3m2!1spt-PT!2snl!4v1673001310092!5m2!1spt-PT!2snl"
             title="Google Maps"
             height="550"
@@ -194,8 +198,7 @@ function Contact() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></Iframe>
-        </ContactMap>
+          ></Iframe> */}
       </MapColumn>
     </div>
   );
@@ -233,7 +236,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 52%;
+  top: 45%;
   left: 52%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -249,7 +252,6 @@ const TitleEvent = styled.p`
 
 const Container = styled.div`
   max-width: 1170px;
-  text-align: left;
   margin: 70px auto 50px auto;
   font-family: "Poppins";
 
@@ -265,12 +267,12 @@ const Container = styled.div`
     max-width: 540px;
   }
 
-  @media (max-width: 500px) {
-    max-width: 500px;
+  @media (max-width: 580px) {
+    max-width: 400px;
   }
 
-  @media (max-width: 400px) {
-    max-width: 350px;
+  @media (max-width: 440px) {
+    max-width: 300px;
   }
 `;
 
@@ -285,31 +287,8 @@ const Row = styled.div`
   align-items: center;
 
   @media (max-width: 1200px) {
-    max-width: 960px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 990px) {
-    max-width: 720px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 540px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 500px) {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (max-width: 400px) {
-    max-width: 350px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -397,8 +376,6 @@ const Textarea = styled.textarea`
   transition: all, 0.3s;
 `;
 
-const ContactMap = styled.div``;
-
 const MapColumn = styled.div`
   width: 100%;
   margin-bottom: 150px;
@@ -410,15 +387,30 @@ const Iframe = styled.iframe`
 
 const SocialMedia = styled.div`
   color: #99d3d1;
-
   display: flex;
   width: 30%;
   margin: 50px auto 100px auto;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    font-size: 1rem;
+    gap: 20px;
+  }
 `;
 
 const SocialMediaLink = styled.a`
   color: #99d3d1;
   text-decoration: none;
+`;
+
+const Map = styled.img`
+  height: 550px;
+  width: 100%;
+
+  @media (max-width: 1500px) {
+    height: 550px;
+    width: auto;
+  }
 `;

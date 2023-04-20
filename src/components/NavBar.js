@@ -5,7 +5,6 @@ import { NavLink as Link } from "react-router-dom";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import BurgerButton from "./BurgerButton";
 
-const scrollToTop = () => window.scrollTo(0, 0);
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
   const handleClick = () => {
@@ -29,6 +28,14 @@ const Navbar = () => {
     });
   };
 
+  const closeMobileMenu = () => {
+    if (window.innerWidth <= 1060) {
+      setClicked(false);
+    }
+  };
+
+  const scrollToTop = () => window.scrollTo(0, 0);
+
   return (
     <Nav>
       <Logo href="/">
@@ -46,10 +53,42 @@ const Navbar = () => {
           </NavLink>
           {/* <Link to={`/blogs/${b.id}`}>See more</Link> */}
           <NavbarDropdownContent>
-            <NavLink to="/category/2">Pedidos de Casamento</NavLink>{" "}
-            <NavLink to="/category/3">Despedidas de Solteira</NavLink>
-            <NavLink to="/category/1">Casamentos</NavLink>
-            <NavLink to="/category/4">Renovação de Votos/Bodas</NavLink>
+            <NavLink
+              to="/category/2"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
+              Pedidos de Casamento
+            </NavLink>{" "}
+            <NavLink
+              to="/category/3"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
+              Despedidas de Solteira
+            </NavLink>
+            <NavLink
+              to="/category/1"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
+              Casamentos
+            </NavLink>
+            <NavLink
+              to="/category/4"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
+              Renovação de Votos/Bodas
+            </NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavbarDropdown
@@ -60,30 +99,82 @@ const Navbar = () => {
             Festas&Eventos <RiArrowDropDownLine />
           </NavLink>
           <NavbarDropdownContent>
-            <NavLink to="/category/8" onClick={scrollToTop}>
+            <NavLink
+              to="/category/8"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
               Aniversários Infantis
             </NavLink>
-            <NavLink to="/category/9" onClick={scrollToTop}>
+            <NavLink
+              to="/category/9"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
               Aniversários Adultos
             </NavLink>
-            <NavLink to="/category/5" onClick={scrollToTop}>
+            <NavLink
+              to="/category/5"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
               Batizados
             </NavLink>
-            <NavLink to="/category/6" onClick={scrollToTop}>
+            <NavLink
+              to="/category/6"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
               Baby Showers
             </NavLink>
-            <NavLink to="/category/7" onClick={scrollToTop}>
+            <NavLink
+              to="/category/7"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
               Chás de Revelação
             </NavLink>
-            <NavLink to="/category/10" onClick={scrollToTop}>
+            <NavLink
+              to="/category/10"
+              onClick={() => {
+                scrollToTop();
+                closeMobileMenu();
+              }}
+            >
               Outros Eventos
             </NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
         <NavLink to="/diy/11">DIY</NavLink>
         {/* <NavLink to="/blog">Blog</NavLink> */}
-        <NavLink to="/about">Sobre</NavLink>
-        <NavLink to="/contact">Contacto</NavLink>
+        <NavLink
+          to="/about"
+          onClick={() => {
+            scrollToTop();
+            closeMobileMenu();
+          }}
+        >
+          Sobre
+        </NavLink>
+        <NavLink
+          to="/contact"
+          onClick={() => {
+            scrollToTop();
+            closeMobileMenu();
+          }}
+        >
+          Contacto
+        </NavLink>
       </Menu>
     </Nav>
   );

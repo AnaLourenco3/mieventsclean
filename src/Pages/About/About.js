@@ -10,7 +10,7 @@ function About() {
           src="https://images.unsplash.com/photo-1464699973457-9a0cf44343d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
           alt="img wedding"
         />
-        <TitleEvent>About Mi</TitleEvent>
+        <TitleEvent>Sobre Mi</TitleEvent>
       </ContainerImage>
       <ContainerBody>
         <ContainerAboutImage>
@@ -131,7 +131,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 52%;
   transform: translate(-50%, -50%);
   text-align: center;

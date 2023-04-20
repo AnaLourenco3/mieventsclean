@@ -83,9 +83,7 @@ const SocialMedia = styled.div`
   font-size: 18px;
   padding-top: 5px;
   @media (max-width: 768px) {
-    display: flex;
-    font-size: small;
-    padding-left: 20px;
+    display: none;
   }
 `;
 
