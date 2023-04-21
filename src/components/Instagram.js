@@ -34,7 +34,7 @@ export default Instagram;
 const InstaContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: 80px 0 100px 0;
+  margin: 180px 0 180px 0;
   gap: 20px;
   flex-wrap: wrap;
 `;

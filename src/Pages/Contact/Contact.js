@@ -60,14 +60,13 @@ function Contact() {
 
   return (
     <div>
-      <ContainerImage>
-        <img
-          className="imagePanorama"
+      <ContainerImageHero>
+        <ImageHero
           src="https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1854&q=80"
           alt="img wedding"
         />
         <TitleEvent>Contacto</TitleEvent>
-      </ContainerImage>
+      </ContainerImageHero>
       <Contacts>
         <Container>
           <Row>
@@ -123,16 +122,29 @@ function Contact() {
                   <p>madebymieventos@gmail.com</p>
                 </Text>
               </ContactWidgetItem>
+              <SocialMedia>
+                <SocialMedia>
+                  <SocialMediaLink href="https://www.instagram.com/madebymievents/">
+                    <BsInstagram style={{ fontSize: "2rem" }} />
+                  </SocialMediaLink>
+                  <SocialMediaLink href="https://www.pinterest.com/">
+                    <BsPinterest style={{ fontSize: "2rem" }} />
+                  </SocialMediaLink>
+                </SocialMedia>
+              </SocialMedia>
             </ContactWidget>
 
             <ContactForm>
               <Form onSubmit={handleSubmit}>
-                <Text style={{ marginBottom: "15px" }}>
-                  Estimado cliente, sinta-se à vontade para me contactar para
-                  qualquer dúvida. Se desejar um orçamento, por favor
-                  especifique o tipo de serviço e número de convidados. Entrarei
-                  em contato consigo o mais breve possível.
-                </Text>
+                <WrapText>
+                  <Text style={{ marginBottom: "15px" }}>
+                    Estimado cliente, sinta-se à vontade para me contactar para
+                    qualquer dúvida. Se desejar um orçamento, por favor
+                    especifique o tipo de serviço, a data e o número de
+                    convidados. Entrarei em contato consigo o mais breve
+                    possível.
+                  </Text>
+                </WrapText>
                 <Input
                   type="text"
                   id=""
@@ -166,28 +178,14 @@ function Contact() {
                   name="message"
                   required
                 />
-                <Button type="submit">Send</Button>
+                <Button type="submit">Enviar</Button>
                 {status && renderAlert()}
               </Form>
             </ContactForm>
           </Row>
         </Container>
       </Contacts>
-      <h1 style={{ textAlign: "center" }}>Social Media</h1>
-      <SocialMedia>
-        <SocialMediaLink href="https://www.instagram.com/madebymievents/">
-          <BsInstagram style={{ fontSize: "2rem" }} />
-        </SocialMediaLink>
-        <SocialMediaLink href="https://www.instagram.com/madebymiweddings/">
-          <BsInstagram style={{ fontSize: "2rem" }} />
-        </SocialMediaLink>
-        <SocialMediaLink href="https://www.facebook.com/profile.php?id=100088437476729">
-          <BsFacebook style={{ fontSize: "2rem" }} />{" "}
-        </SocialMediaLink>
-        <SocialMediaLink href="https://www.pinterest.com/">
-          <BsPinterest style={{ fontSize: "2rem" }} />
-        </SocialMediaLink>
-      </SocialMedia>
+
       <MapColumn>
         <Map src={map} alt="map" />
         {/* <Iframe
@@ -206,7 +204,7 @@ function Contact() {
 
 const renderAlert = () => (
   <RenderAlert>
-    <p>Your message was submitted successfully!</p>
+    <p>Mensagem enviada com sucesso!</p>
   </RenderAlert>
 );
 
@@ -224,11 +222,18 @@ const RenderAlert = styled.div`
   margin: 5px 0 0px 5px;
 `;
 
-const ContainerImage = styled.div`
+const ContainerImageHero = styled.div`
   width: auto;
-  height: 500px;
+  height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+`;
+
+const ImageHero = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 `;
 
 const TitleEvent = styled.p`
@@ -251,11 +256,11 @@ const TitleEvent = styled.p`
 `;
 
 const Container = styled.div`
-  max-width: 1170px;
-  margin: 70px auto 50px auto;
+  max-width: 1200px;
+  margin: 70px auto 100px auto;
   font-family: "Poppins";
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1260px) {
     max-width: 960px;
   }
 
@@ -321,6 +326,10 @@ const Text = styled.div`
   padding-left: 10px;
 `;
 
+const WrapText = styled.div`
+  margin-bottom: 60px;
+`;
+
 const P = styled.p`
   font-weight: bold;
 `;
@@ -356,24 +365,47 @@ const Input = styled.input`
   padding-left: 10px;
   font-size: 15px;
   color: #111;
-  border: 1px solid #e1e1e1;
+  border: none; // Remove the border
+  background: transparent; // Set the background to transparent
+  border-bottom: 1px solid #e1e1e1; // Add a bottom border
   margin-bottom: 20px;
-  border-radius: 4px;
+  border-radius: 0; // Remove the border-radius
   transition: all, 0.3s;
+  outline: none; // Remove the outline
+
+  &::placeholder {
+    font-family: "Poppins";
+    font-size: 14px;
+  }
+
+  // Add a focus effect to change the border-bottom color
+  &:focus {
+    border-bottom: 1px solid #99d3d1;
+  }
 `;
 
 const Textarea = styled.textarea`
   height: 110px;
   width: 100%;
   padding: 12px 0 0 10px;
-
   font-size: 15px;
   color: #111;
-  border: 1px solid #e1e1e1;
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  background: transparent;
+  outline: none;
   resize: vertical;
   margin-bottom: 9px;
-  border-radius: 4px;
-  transition: all, 0.3s;
+  transition: all 0.3s;
+
+  &::placeholder {
+    font-family: "Poppins";
+    font-size: 14px;
+  }
+
+  &:focus {
+    border-bottom: 1px solid #99d3d1;
+  }
 `;
 
 const MapColumn = styled.div`
@@ -381,28 +413,24 @@ const MapColumn = styled.div`
   margin-bottom: 150px;
 `;
 
-const Iframe = styled.iframe`
-  width: 100%;
-`;
+// const Iframe = styled.iframe`
+//   width: 100%;
+// `;
 
 const SocialMedia = styled.div`
-  color: #99d3d1;
   display: flex;
-  width: 30%;
-  margin: 50px auto 100px auto;
-  align-items: center;
-  justify-content: space-evenly;
+  margin: 20px 0 0 0;
+  justify-content: left;
 
-  @media (max-width: 768px) {
-    width: 50%;
-    font-size: 1rem;
-    gap: 20px;
+  @media (max-width: 1200px) {
+    justify-content: center;
   }
 `;
 
 const SocialMediaLink = styled.a`
-  color: #99d3d1;
+  color: black;
   text-decoration: none;
+  padding: 0 10px;
 `;
 
 const Map = styled.img`

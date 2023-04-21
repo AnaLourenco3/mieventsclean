@@ -33,14 +33,10 @@ function CategoryBlogList() {
   return (
     <div>
       {categoryData && (
-        <ContainerImage>
-          <img
-            className="imagePanorama"
-            src={categoryData.imageUrl}
-            alt="img wedding"
-          />
+        <ContainerImageHero>
+          <ImageHero src={categoryData.imageUrl} alt="img wedding" />
           <TitleEvent>{categoryData.name}</TitleEvent>
-        </ContainerImage>
+        </ContainerImageHero>
       )}
       <ContainerBody>
         {categoryData && (
@@ -71,11 +67,18 @@ function CategoryBlogList() {
 
 export default CategoryBlogList;
 
-const ContainerImage = styled.div`
+const ContainerImageHero = styled.div`
   width: auto;
-  height: 500px;
+  height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+`;
+
+const ImageHero = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 `;
 
 const TitleEvent = styled.p`

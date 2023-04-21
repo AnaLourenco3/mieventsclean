@@ -1,14 +1,35 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import sky from "./images/sky.jpg";
+import {
+  ParallaxBanner,
+  ParallaxBannerLayer,
+  ParallaxProvider,
+} from "react-scroll-parallax";
 
 function ContactUsHomepage() {
   const navigate = useNavigate();
 
   return (
     <Container>
-      <Text>Vamos Celebrar!</Text>
-
-      <Button onClick={() => navigate("/contact")}>Contacto</Button>
+      <ParallaxProvider>
+        <ParallaxBanner style={{ aspectRatio: "2 / 1" }}>
+          <ParallaxBannerLayer speed={-20}>
+            <img
+              src={sky}
+              alt="wedding img"
+              loading="lazy"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </ParallaxBannerLayer>
+          <ParallaxBannerLayer speed={-10}>
+            <TextWrapper>
+              <Text>Vamos Celebrar!</Text>
+              <Button onClick={() => navigate("/contact")}>Contacto</Button>
+            </TextWrapper>
+          </ParallaxBannerLayer>
+        </ParallaxBanner>
+      </ParallaxProvider>
     </Container>
   );
 }
@@ -17,26 +38,35 @@ export default ContactUsHomepage;
 
 const Container = styled.div`
   width: 100%;
-  margin: 180px auto 80px auto;
-  background-color: rgb(226, 183, 185, 0.8);
-  height: 200px;
+  margin: 180px auto 480px auto;
+  height: 400px;
   padding: 30px 0px;
   text-align: center;
+`;
+
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 const Text = styled.h1`
   font-family: Amsterdam;
   color: white;
+  font-size: 3rem;
+  font-weight: 500;
 `;
 
 const Button = styled.button`
   padding: 10px;
-  font-family: "Poppins", sans-serif;
   color: white;
   background: none;
   cursor: grab;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: medium;
   border: 2px solid white;
   border-radius: 50px;
 

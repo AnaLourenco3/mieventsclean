@@ -155,8 +155,15 @@ const Navbar = () => {
             </NavLink>
           </NavbarDropdownContent>
         </NavbarDropdown>
-        <NavLink to="/diy/11">DIY</NavLink>
-        {/* <NavLink to="/blog">Blog</NavLink> */}
+        <NavLink
+          to="/diy/11"
+          onClick={() => {
+            scrollToTop();
+            closeMobileMenu();
+          }}
+        >
+          Blog
+        </NavLink>
         <NavLink
           to="/about"
           onClick={() => {
