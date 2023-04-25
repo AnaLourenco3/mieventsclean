@@ -81,6 +81,10 @@ const ContainerImageHero = styled.div`
   height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
 `;
 
 const ImageHero = styled.img`
@@ -105,7 +109,7 @@ const TitleEvent = styled.p`
   transition: 0.6s ease-in-out;
   word-spacing: 30px;
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -287,4 +291,5 @@ const EndParagraph = styled.p`
   @media (max-width: 760px) {
     font-size: 1.2rem;
     padding: 0 5%;
+  }
 `;

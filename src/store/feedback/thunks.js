@@ -16,7 +16,7 @@ export const fetchFeedbacks = () => {
     try {
       //   dispatch(appLoading());
       const response = await axios.get(`${apiUrl}/feedbacks`);
-      console.log("this is from /feedback", response.data);
+      // console.log("this is from /feedback", response.data);
       dispatch(fetchFeedbacksSuccess(response.data.feedbacks));
       //   dispatch(appDoneLoading());
     } catch (e) {

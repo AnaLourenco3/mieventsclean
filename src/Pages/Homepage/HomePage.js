@@ -28,9 +28,8 @@ function HomePage() {
 
       <ContactUsHomepage />
 
-      <ContainerFeedbackSlider>
-        <SwiperFeedback props={feedbacks} />
-      </ContainerFeedbackSlider>
+      <SwiperFeedback props={feedbacks} />
+
       <Instagram />
     </div>
   );
@@ -42,10 +41,4 @@ const ContainerCarouselSlider = styled.div`
   width: auto;
   height: auto;
   margin: 75px 0 70px 0;
-`;
-
-const ContainerFeedbackSlider = styled.div`
-  width: 90%;
-  height: 600px;
-  margin: auto;
 `;

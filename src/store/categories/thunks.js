@@ -13,7 +13,7 @@ export const fetchCategories = () => {
     try {
       dispatch(appLoading());
       const response = await axios.get(`${apiUrl}/categories`);
-      console.log("this is from /categories", response.data);
+      // console.log("this is from /categories", response.data);
       dispatch(fetchCategoriesSuccess(response.data.categories));
       dispatch(appDoneLoading());
     } catch (e) {
@@ -28,7 +28,7 @@ export const fetchBlogDataPerCategory = (id) => {
     try {
       dispatch(appLoading());
       const response = await axios.get(`${apiUrl}/categories/${id}/blogs`);
-      console.log("this is from /categories with blogs", response.data);
+      // console.log("this is from /categories with blogs", response.data);
       dispatch(fetchCategoriesWithDataSuccess(response.data.blogs));
       dispatch(fetchCategoryDataSuccess(response.data.category));
 

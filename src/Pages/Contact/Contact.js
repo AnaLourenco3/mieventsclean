@@ -168,7 +168,6 @@ function Contact() {
                   placeholder="Telefone (opcional) "
                   value={values.phone}
                   onChange={handleChange}
-                  required
                   name="phone"
                 />
                 <Textarea
@@ -186,18 +185,18 @@ function Contact() {
         </Container>
       </Contacts>
 
-      <MapColumn>
+      {/* <MapColumn>
         <Map src={map} alt="map" />
-        {/* <Iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199168.24109346297!2d-9.30079440323782!3d38.74067577922809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa%2C%20Portugal!5e0!3m2!1spt-PT!2snl!4v1673001310092!5m2!1spt-PT!2snl"
-            title="Google Maps"
-            height="550"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></Iframe> */}
-      </MapColumn>
+        <Iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199168.24109346297!2d-9.30079440323782!3d38.74067577922809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa%2C%20Portugal!5e0!3m2!1spt-PT!2snl!4v1673001310092!5m2!1spt-PT!2snl"
+          title="Google Maps"
+          height="550"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></Iframe>
+      </MapColumn> */}
     </div>
   );
 }
@@ -227,6 +226,10 @@ const ContainerImageHero = styled.div`
   height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
 `;
 
 const ImageHero = styled.img`
@@ -241,7 +244,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 52%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -251,7 +254,7 @@ const TitleEvent = styled.p`
   transition: 0.6s ease-in-out;
   word-spacing: 30px;
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -323,7 +326,7 @@ const Icon = styled.div`
 
 const Text = styled.div`
   /* overflow: hidden; */
-  padding-left: 10px;
+  /* padding-left: 10px; */
 `;
 
 const WrapText = styled.div`
@@ -362,7 +365,7 @@ const ContactForm = styled.div`
 const Input = styled.input`
   height: 46px;
   width: 100%;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   font-size: 15px;
   color: #111;
   border: none; // Remove the border

@@ -28,7 +28,7 @@ function CategoryBlogDetails() {
       <ContainerBlogDetails>
         <div>
           <p>{blogData.date}</p>
-          <h2>{blogData.title}</h2>
+          <BlogTitle>{blogData.title}</BlogTitle>
           <p style={{ marginTop: "50px" }}>{blogData.text}</p>{" "}
         </div>
       </ContainerBlogDetails>
@@ -66,6 +66,12 @@ const ContainerBody = styled.div`
     margin: 200px auto 110px auto;
   } ;
 `;
+
+const BlogTitle = styled.h2`
+  font-weight: 300;
+`;
+
+
 const ContainerBlogDetails = styled.div`
   margin-bottom: 70px;
 `;

@@ -38,10 +38,14 @@ export default ContactUsHomepage;
 
 const Container = styled.div`
   width: 100%;
-  margin: 180px auto 480px auto;
+  margin: 180px auto 325px auto;
   height: 400px;
   padding: 30px 0px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const TextWrapper = styled.div`

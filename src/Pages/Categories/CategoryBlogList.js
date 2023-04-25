@@ -72,6 +72,10 @@ const ContainerImageHero = styled.div`
   height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
 `;
 
 const ImageHero = styled.img`
@@ -86,7 +90,7 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -96,6 +100,10 @@ const TitleEvent = styled.p`
   transition: 0.6s ease-in-out;
   @media (max-width: 1060px) {
     font-size: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
   }
 `;
 

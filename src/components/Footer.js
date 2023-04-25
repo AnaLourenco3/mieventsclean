@@ -28,9 +28,9 @@ const Footer = () => {
             </FootingParagraph>
 
             <FooterLink to="/about" style={{ marginTop: "20px" }}>
-              About
+              Sobre
             </FooterLink>
-            <FooterLink to="/contact">Contact </FooterLink>
+            <FooterLink to="/contact">Contacto </FooterLink>
           </Column>
           <Column>
             <Heading>Casamentos</Heading>
