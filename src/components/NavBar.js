@@ -43,7 +43,15 @@ const Navbar = () => {
       </Logo>
       <BurgerButton clicked={clicked} handleClick={handleClick} />
       <Menu clicked={clicked}>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          onClick={() => {
+            scrollToTop();
+            closeMobileMenu();
+          }}
+        >
+          Home
+        </NavLink>
         <NavbarDropdown
           onClick={() => handleDropdownToggle(1)}
           onBlur={() => handleDropdownClose(1)}

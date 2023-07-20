@@ -19,6 +19,10 @@ export default function SwiperFeedback({ props }) {
           centeredSlides={true}
           zoom={true}
           slidesPerView={"auto"}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,

@@ -29,9 +29,12 @@ const App = () => {
           <Route path="/diy/:id" element={<Diy />} />
         </Routes>
         <FloatingWhatsApp
-          phoneNumber="31639112882"
+          phoneNumber="351964345526"
           accountName="Made By Mi"
           avatar={miLogo}
+          allowClickAway={true}
+          chatMessage="Olá, como posso ajudar?"
+          statusMessage=""
         />
       </div>
       <div>

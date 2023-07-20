@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import image from "../../components/images/Miriam.jpg";
 import ImgHeading from "./Images/ImgHeading1.png";
+import ImgHeading2 from "./Images/ImgHeading2.png";
 import ImgHeading3 from "./Images/ImgHeading3.png";
 
 function About() {
@@ -11,16 +12,18 @@ function About() {
           src="https://images.unsplash.com/photo-1464699973457-9a0cf44343d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
           alt="img wedding"
         />
-        <TitleEvent>Sobre Mi</TitleEvent>
+        <TitleEvent>Sobre</TitleEvent>
       </ContainerImageHero>
       <ContainerBody>
-        <ContainerHeading>
-          <Heading>
+        <ContainerHeading1>
+          <Heading1>
             <h2>Miriam Recacho</h2>
             <p>Head of Training & Event Planner</p>
-          </Heading>
-          <HeadingImage src={ImgHeading} />
-        </ContainerHeading>
+          </Heading1>
+          <WrapperImage1>
+            <HeadingImage1 src={ImgHeading} />
+          </WrapperImage1>
+        </ContainerHeading1>
         <Paragraph>
           Desde pequena que sempre quis trabalhar diretamente com pessoas,
           contribuindo para a sua felicidade e bem-estar. Licenciou-se em
@@ -29,6 +32,20 @@ function About() {
           seu foco em ajudar quem a procura veio a direcionar-se para esta área
           tão especial como a de concretizar momentos únicos e inesquecíveis. {" "}
         </Paragraph>
+        <ContainerHeading2>
+          <WrapperImage2>
+            <HeadingImage2 src={ImgHeading2} />
+          </WrapperImage2>
+          <Heading2>
+            <p>
+              {" "}
+              Participar destes momentos de celebração, poder organizar e tratar
+              de todos os detalhes - que fazem toda a diferença, é a minha maior
+              satisfação!
+            </p>
+          </Heading2>
+        </ContainerHeading2>
+
         <Paragraph>
           Com o intuito de oferecer sempre um serviço de excelência, procura
           manter-se informada, atualizada e constantemente acrescentar
@@ -38,19 +55,13 @@ function About() {
           e reúne como principais características ser comunicativa, criativa,
           organizada, rigorosa e muito perfeccionista.
         </Paragraph>
-
         <ContainerHeading3>
-          <Heading>
-            <TextHeading2and3>
-              “A «made by mi» surge na vontade de partilhar e expandir uma
-              grande paixão - contribuir para tornar momentos importantes dos
-              que me procuram, em eventos únicos e memoráveis!”
-            </TextHeading2and3>
-          </Heading>
+          <p>
+            “A «made by mi» surge na vontade de partilhar e expandir uma grande
+            paixão - contribuir para tornar momentos importantes dos que me
+            procuram, em eventos únicos e memoráveis!”
+          </p>
         </ContainerHeading3>
-        <WrapImage>
-          <Heading3Image src={ImgHeading3} />
-        </WrapImage>
 
         <Paragraph>
           O meu compromisso é a minha entrega a cada projeto, dar sempre o meu
@@ -61,10 +72,18 @@ function About() {
           significado!
         </Paragraph>
         <EndParagraph>
-          A vida merece ser (celebrada e) recheada de motivos para celebrar!{" "}
-          {"\n"}
-          Vamos celebrá-la?
+          <p>
+            A vida merece ser (celebrada e) recheada de motivos para celebrar!{" "}
+            <br />
+            Vamos celebrá-la?
+          </p>
         </EndParagraph>
+        <WrapperImage3>
+          {/* <Greet>Xx, Mi</Greet> */}
+          <Image3 src={ImgHeading3} />
+        </WrapperImage3>
+        <Greet>Xx, Mi</Greet>
+        {/* <Greet>Xx, Mi</Greet> */}
       </ContainerBody>
     </div>
   );
@@ -72,15 +91,12 @@ function About() {
 
 export default About;
 
-const ContainerBody = styled.div`
-  margin: 180px auto 150px auto;
-`;
-
 const ContainerImageHero = styled.div`
   width: auto;
   height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+  position: relative;
 
   @media (max-width: 768px) {
     height: 400px;
@@ -99,8 +115,8 @@ const TitleEvent = styled.p`
   font-size: 4rem;
   text-shadow: 2px 1px 4px black;
   position: absolute;
-  top: 45%;
-  left: 52%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   margin: auto;
@@ -113,183 +129,247 @@ const TitleEvent = styled.p`
   }
 `;
 
-const ContainerHeading = styled.div`
+const ContainerBody = styled.div`
+  margin: 150px auto 150px auto;
+  max-width: 1700px;
+`;
+
+const ContainerHeading1 = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  background-color: #f5f5f5;
+
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  min-height: 250px;
+  max-height: 250px;
   margin-bottom: 150px;
 
-  @media (max-width: 680px) {
-    grid-template-columns: 60% 40%;
-    gap: 0;
-    min-height: 150px;
-  }
-
-  @media (max-width: 450px) {
-    grid-template-columns: 55% 45%;
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
   }
 `;
 
-const Heading = styled.div`
+const Heading1 = styled.div`
+  background-color: #ffcccc;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   h2 {
     font-family: Amsterdam;
     font-size: 2rem;
     font-weight: 300;
+    padding-top: 20px;
   }
   p {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 1200px) {
-    h2 {
-      font-size: 1.75rem;
-    }
-    p {
-      font-size: 1.25rem;
-    }
+    font-size: 1.2rem;
+    padding-bottom: 20px;
   }
 
   @media (max-width: 768px) {
     h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
     p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 680px) {
-    h2 {
-      font-size: 1.3rem;
-    }
-    p {
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 450px) {
-    h2 {
-      font-size: 1.1rem;
-    }
-    p {
-      font-size: 0.9rem;
-    }
-  }
-  @media (max-width: 380px) {
-    h2 {
-      font-size: 1rem;
-    }
-    p {
-      font-size: 0.8rem;
+      font-size: 1.2rem;
+      padding-bottom: 50px;
     }
   }
 `;
 
-const HeadingImage = styled.img`
+const WrapperImage1 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display; flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcccc;
+   
+  @media (max-width: 860px) {
+    background-color: transparent;
+    position: static;
+  }
+
+
+`;
+
+const HeadingImage1 = styled.img`
   width: 500px;
   position: absolute;
   top: -40%;
-  right: 10%;
+  right: 30%;
+
+  @media (max-width: 1060px) {
+    right: 10%;
+    top: -40%;
+  }
+
+  @media (max-width: 860px) {
+    position: static;
+    width: 70%;
+    margin-top: -50px;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+`;
+
+const ContainerHeading2 = styled.div`
+  width: 80%;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  margin: 150px auto 150px auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+`;
+
+const Heading2 = styled.div`
+  width: 100%;
+  background-color: #ffe6d8;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+
+  p {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Amsterdam;
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
 
   @media (max-width: 1200px) {
-    width: 450px;
-    top: -35%;
-    right: 7%;
+    margin-top: -80px;
   }
 
-  @media (max-width: 968px) {
-    width: 400px;
-    top: -25%;
-    right: 5%;
+  @media (max-width: 768px) {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+`;
+
+const WrapperImage2 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const HeadingImage2 = styled.img`
+  width: 500px;
+  position: absolute;
+
+  @media (max-width: 1024px) {
+    position: static;
+    justify-content: right;
   }
 
-  @media (max-width: 790px) {
-    right: 1%;
-  }
-
-  @media (max-width: 680px) {
-    width: 350px;
-    top: -55%;
-    right: 0%;
-  }
-
-  @media (max-width: 600px) {
-    width: 300px;
-    top: -50%;
-    right: -2%;
-  }
-
-  @media (max-width: 530px) {
-    width: 250px;
-    top: -25%;
-    right: -4%;
-  }
-
-  @media (max-width: 450px) {
-    right: -5%;
-  }
-
-  @media (max-width: 380px) {
-    width: 200px;
-    top: -13%;
-    right: -6%;
+  @media (max-width: 525px) {
+    width: 100%;
   }
 `;
 
 const Paragraph = styled.p`
-  font-size: 1.1rem;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 1.2rem;
   text-align: center;
-  padding: 0 10%;
 
-  @media (max-width: 760px) {
-    font-size: 0.9rem;
-    padding: 0 5%;
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
 const ContainerHeading3 = styled.div`
   background-color: RGB(186, 210, 184);
   min-height: 250px;
-  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-self: center;
-`;
+  justify-content: center;
+  align-items: center;
+  margin: 120px auto 120px auto;
 
-const TextHeading2and3 = styled.div`
-  font-family: Amsterdam;
-  font-size: 1.7rem;
-
-  padding: 5% 5%;
-`;
-
-const WrapImage = styled.div`
-  width: 400px;
-  position: relative;
-`;
-
-const Heading3Image = styled.img`
-  width: 100%;
-  position: absolute;
-  top: 10%;
-`;
-
-const EndParagraph = styled.p`
-  font-family: Amsterdam;
-  font-size: 1.7rem;
-  text-align: center;
-  white-space: pre-wrap;
-  padding: 0 10%;
-
-  @media (max-width: 760px) {
-    font-size: 1.2rem;
-    padding: 0 5%;
+  p {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Amsterdam;
+    font-size: 1.5rem;
+    padding: 20px 0;
   }
+
+  @media (max-width: 768px) {
+    margin: 80px auto 80px auto;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+`;
+
+const EndParagraph = styled.div`
+  width: 90%;
+  margin: 80px auto 0 auto;
+  p {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Amsterdam;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 50px auto 0 auto;
+    text-align: center;
+    p {
+      font-size: 1.2rem;
+    }
+  }
+`;
+
+const WrapperImage3 = styled.div`
+  max-width: 1200px;
+  width: 70%;
+  margin: 0 auto;
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: -20px;
+
+  @media (max-width: 840px) {
+    margin-top: 0;
+    justify-content: center;
+  }
+`;
+
+const Image3 = styled.img`
+  width: 500px;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    overflow: hidden;
+  }
+`;
+
+const Greet = styled.div`
+  font-family: Amsterdam;
+  font-size: 1.2rem;
+  justify-content: center;
+  display: flex;
 `;

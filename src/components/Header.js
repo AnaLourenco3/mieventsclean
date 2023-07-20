@@ -3,6 +3,7 @@ import { BsFacebook, BsPinterest } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { TfiYoutube } from "react-icons/tfi";
 
 const email = "madebymieventos@gmail.com";
 const mobile = "964345526";
@@ -16,8 +17,8 @@ function Header() {
           <p style={{ paddingRight: "20px" }}> {email} </p>{" "}
         </ClickableLink>
         <ClickableLink href={`tel:${mobile}`}>
-          <BsFillTelephoneFill style={{ paddingRight: "5px" }} />
-          <p>964345526</p>
+          {/* <BsFillTelephoneFill style={{ paddingRight: "5px" }} />
+          <p>964345526</p> */}
         </ClickableLink>
       </Details>
       <SocialMedia>
@@ -25,14 +26,17 @@ function Header() {
           <BsInstagram style={{ paddingRight: "10px" }} />{" "}
         </HeaderLink> */}
         <HeaderLink href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y=">
-          <BsInstagram style={{ paddingRight: "10px" }} />
+          <BsInstagram style={{ paddingRight: "20px" }} />
         </HeaderLink>
-        {/* {/* <HeaderLink href="https://www.facebook.com/profile.php?id=1000884">
-          <BsFacebook style={{ paddingRight: "10px" }} />
-        </HeaderLink> */}
-        <HeaderLink href="https://www.pinterest.pt/madebymievents/_saved/">
-          <BsPinterest style={{ paddingRight: "10px" }} />
-        </HeaderLink>{" "}
+        <HeaderLink href="https://www.facebook.com/profile.php?id=100088437476729">
+          <BsFacebook style={{ paddingRight: "20px" }} />
+        </HeaderLink>
+        <HeaderLink href="https://www.pinterest.pt/madebymieventplanner">
+          <BsPinterest style={{ paddingRight: "20px" }} />
+        </HeaderLink>
+        <HeaderLink href="https://www.youtube.com">
+          <TfiYoutube style={{ paddingRight: "10px" }} />
+        </HeaderLink>
       </SocialMedia>
     </Container>
   );

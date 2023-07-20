@@ -6,6 +6,7 @@ import { ImLocation } from "react-icons/im";
 import { BsPinterest } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import { TfiYoutube } from "react-icons/tfi";
 
 const Footer = () => {
   return (
@@ -22,10 +23,10 @@ const Footer = () => {
               <BsFillTelephoneFill style={{ marginRight: "5px" }} /> +351
               964345526
             </FootingParagraph>
-            <FootingParagraph>
+            {/* <FootingParagraph>
               <ImLocation style={{ marginRight: "5px" }} /> Lisboa e Vale do
               Tejo
-            </FootingParagraph>
+            </FootingParagraph> */}
 
             <FooterLink to="/about" style={{ marginTop: "20px" }}>
               Sobre
@@ -57,14 +58,14 @@ const Footer = () => {
             <FooterLinkSocialMedia href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y=">
               <BsInstagram style={{ marginRight: "5px" }} /> Made By Mi Events
             </FooterLinkSocialMedia>
-            {/* <FooterLinkSocialMedia
-              href="https://www.facebook.com/profile.php?id=100088437476729"
-              style={{ marginLeft: "10px" }}
-            >
+            <FooterLinkSocialMedia href="https://www.facebook.com/profile.php?id=100088437476729">
               <BsFacebook />
-            </FooterLinkSocialMedia> */}
-            <FooterLinkSocialMedia href="#">
+            </FooterLinkSocialMedia>
+            <FooterLinkSocialMedia href="www.pinterest.pt/madebymieventplanner">
               <BsPinterest />
+            </FooterLinkSocialMedia>
+            <FooterLinkSocialMedia href="www.youtube.com">
+              <TfiYoutube />
             </FooterLinkSocialMedia>
           </Column>
         </Row>

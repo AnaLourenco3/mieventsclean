@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import sky from "./images/sky.jpg";
+import video from "./images/videoParallax.mp4";
 import {
   ParallaxBanner,
   ParallaxBannerLayer,
@@ -13,12 +13,14 @@ function ContactUsHomepage() {
   return (
     <Container>
       <ParallaxProvider>
-        <ParallaxBanner style={{ aspectRatio: "2 / 1" }}>
+        <ParallaxBanner style={{ height: "600px" }}>
           <ParallaxBannerLayer speed={-20}>
-            <img
-              src={sky}
+            <video
+              src={video}
               alt="wedding img"
-              loading="lazy"
+              autoPlay
+              muted
+              loop
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </ParallaxBannerLayer>
@@ -38,14 +40,10 @@ export default ContactUsHomepage;
 
 const Container = styled.div`
   width: 100%;
-  margin: 180px auto 325px auto;
+  margin: 180px auto 150px auto;
   height: 400px;
   padding: 30px 0px;
   text-align: center;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const TextWrapper = styled.div`

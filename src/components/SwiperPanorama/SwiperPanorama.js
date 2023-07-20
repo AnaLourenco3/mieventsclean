@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "./swiperPanorama.css";
 import { Autoplay } from "swiper";
+import Panorama1 from "./Images/Panorama1.png";
+import Panorama2 from "./Images/Panorama2.png";
 
 export default function SwiperPanorama() {
   return (
@@ -11,7 +13,7 @@ export default function SwiperPanorama() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 15000,
+          delay: 12000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
@@ -19,7 +21,7 @@ export default function SwiperPanorama() {
         <SwiperSlide className="swiperSlide2">
           <img
             className="imagePanoramaHome"
-            src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            src={Panorama1}
             alt="img wedding"
           />
 
@@ -30,6 +32,7 @@ export default function SwiperPanorama() {
               <p>Despedidas de Solteira</p>
               <p>Casamentos</p>
               <p>Renovação de Votos/Bodas</p>
+              <p>Celebrante</p>
             </div>
           </div>
           <div>
@@ -47,7 +50,7 @@ export default function SwiperPanorama() {
         <SwiperSlide className="swiperSlide2">
           <img
             className="imagePanoramaHome"
-            src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            src={Panorama2}
             alt="img wedding"
           />
           <div>

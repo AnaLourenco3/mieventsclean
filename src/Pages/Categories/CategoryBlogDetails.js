@@ -61,16 +61,15 @@ const ContainerBody = styled.div`
   font-family: "Poppins";
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 80%;
     min-height: 500px;
     margin: 200px auto 110px auto;
-  } ;
+  }
 `;
 
 const BlogTitle = styled.h2`
   font-weight: 300;
 `;
-
 
 const ContainerBlogDetails = styled.div`
   margin-bottom: 70px;

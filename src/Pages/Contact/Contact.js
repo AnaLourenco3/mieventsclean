@@ -77,7 +77,6 @@ function Contact() {
                     style={{
                       color: "white",
                       fontSize: "30px",
-
                       marginTop: "15px",
                       marginLeft: "15px",
                     }}
@@ -245,7 +244,7 @@ const TitleEvent = styled.p`
   text-shadow: 2px 1px 4px black;
   position: absolute;
   top: 50%;
-  left: 52%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   margin: auto;
@@ -259,7 +258,7 @@ const TitleEvent = styled.p`
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 70px auto 100px auto;
   font-family: "Poppins";
 
@@ -291,19 +290,24 @@ const Contacts = styled.section`
 
 const Row = styled.div`
   display: grid;
+  gap: 20px;
   grid-template-columns: 40% 60%;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: 1200px) {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 50px;
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 `;
 
 const ContactWidget = styled.div`
-  margin-bottom: 40px;
+  @media (max-width: 1200px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const ContactWidgetItem = styled.div`
@@ -321,7 +325,10 @@ const Icon = styled.div`
   margin-right: 30px;
   float: left;
   display: flex;
-  /* margin-top: 25px; */
+
+  @media (max-width: 768px) {
+    margin-right: 15px;
+  }
 `;
 
 const Text = styled.div`
@@ -350,7 +357,7 @@ const Button = styled.button`
   letter-spacing: 2px;
   border-radius: 50px;
   padding: 12px 0px 10px 0;
-  margin: 5px;
+  margin-top: 15px;
 `;
 
 const Form = styled.form`
@@ -390,12 +397,14 @@ const Input = styled.input`
 const Textarea = styled.textarea`
   height: 110px;
   width: 100%;
-  padding: 12px 0 0 10px;
+  /* padding: 12px 0 0 10px; */
   font-size: 15px;
   color: #111;
   border: none;
   border-bottom: 1px solid #e1e1e1;
   background: transparent;
+  border-radius: 0; // Remove the border-radius
+  outline: none; // Remove the outline
   outline: none;
   resize: vertical;
   margin-bottom: 9px;

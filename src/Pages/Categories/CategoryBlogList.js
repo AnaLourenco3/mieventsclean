@@ -72,6 +72,7 @@ const ContainerImageHero = styled.div`
   height: 550px;
   margin: 135px 0 0 0;
   text-align: center;
+  position: relative;
 
   @media (max-width: 768px) {
     height: 400px;
@@ -114,7 +115,7 @@ const ContainerBody = styled.div`
   @media (max-width: 768px) {
     width: 95%;
     margin: 70px auto 110px auto;
-  } ;
+  }
 `;
 
 const ContainerQuote = styled.div`
@@ -136,7 +137,7 @@ const ContainerText = styled.div`
   @media (max-width: 768px) {
     width: 90%;
     margin: 50px auto 80px auto;
-  } ;
+  }
 `;
 
 const ContainerBlog = styled.div`
@@ -157,14 +158,14 @@ const ContainerBlog = styled.div`
     flex-direction: column;
     grid-gap: 10px;
     font-size: 0.8rem;
-  } ;
+  }
 `;
 
 const ContainerImageBlog = styled.div`
   @media (max-width: 768px) {
     margin-left: 0;
     text-align: center;
-  } ;
+  }
 `;
 
 const ImageBlog = styled.img`
@@ -174,7 +175,7 @@ const ImageBlog = styled.img`
   @media (max-width: 768px) {
     width: 350px;
     height: 250px;
-  } ;
+  }
 `;
 
 const ContainerDescriptionBlog = styled.div`
@@ -182,7 +183,7 @@ const ContainerDescriptionBlog = styled.div`
 
   @media (max-width: 768px) {
     padding-top: 0;
-  } ;
+  }
 `;
 
 const EventName = styled.p`
@@ -191,7 +192,7 @@ const EventName = styled.p`
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
-  } ;
+  }
 `;
 
 const LinkDetails = styled(Link)`

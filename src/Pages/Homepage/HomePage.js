@@ -13,7 +13,7 @@ function HomePage() {
   const dispatch = useDispatch();
 
   const feedbacks = useSelector(selectFeedbacks);
-  console.log("from page", feedbacks);
+  // console.log("from page", feedbacks);
 
   useEffect(() => {
     dispatch(fetchFeedbacks());
