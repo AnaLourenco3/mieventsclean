@@ -49,7 +49,7 @@ const InstaContainer = styled.div`
   grid-template-columns: 50% 50%;
   /* padding: 80px 0 120px 0; */
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -90,9 +90,10 @@ const TitleInsta = styled.h1`
   color: white;
   z-index: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     font-size: 1.5rem;
-    margin: 0 0 50px 40px;
+    text-align: center;
+    margin: 0 0 50px 0;
   }
 `;
 
@@ -115,6 +116,9 @@ const Quote = styled.div`
   color: white;
   text-shadow: 4px 1px 4px black;
   z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 768px) {
     font-size: 1.7rem;
