@@ -22,9 +22,6 @@ function Header() {
         </ClickableLink>
       </Details>
       <SocialMedia>
-        {/* <HeaderLink href="https://instagram.com/madebymiweddings?igshid=YmMyMTA2M2Y=">
-          <BsInstagram style={{ paddingRight: "10px" }} />{" "}
-        </HeaderLink> */}
         <HeaderLink href="https://instagram.com/madebymievents?igshid=YmMyMTA2M2Y=">
           <BsInstagram style={{ paddingRight: "20px" }} />
         </HeaderLink>
